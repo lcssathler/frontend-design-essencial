@@ -1,0 +1,20 @@
+.left-box {
+  width: 100px;
+  height: 100px;
+  float: left;
+  background-color: rgb(248, 225, 13);
+}
+
+.middle-box {
+  width: 100px;
+  height: 100px;
+  float: left;
+  background-color: #cc0505;
+}
+
+.right-box {
+  width: 100px;
+  height: 100px;
+  float: left;
+  background-color: black;
+}
