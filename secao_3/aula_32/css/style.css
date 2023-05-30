@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.my-box {
+    background-color: rgb(43, 189, 226);
+    height: 100px;
+}
+
+.my-box div {
+    background-color: rgb(97, 170, 218);
+    height: 80px;
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+}
+
+.my-box .div-1 {
+    background-color: crimson;
+}
+
+.my-box .div-2 {
+    background-color: black;
+}
+
+.my-box .div-3 {
+    background-color: rgb(234, 0, 255);
+}
