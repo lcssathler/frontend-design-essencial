@@ -7,9 +7,9 @@
     width: 80%;
     height: 300px;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     align-content: center;
     margin: 60px auto;
     border-radius: 8px;
@@ -21,9 +21,8 @@
     border: 4px solid black;
     border-radius: 10px;
     padding: 30px;
-    flex-basis: 10%;
+    flex-basis: 300px;
 }
-
 .grow-1 {
     flex-grow: 1;
 }
@@ -35,3 +34,16 @@
 .grow-5 {
     flex-grow: 5;
 }
+
+.shrink-1 {
+    flex-shrink: 1;
+}
+
+.shrink-3 {
+    flex-shrink: 3;
+}
+
+.shrink-5 {
+    flex-shrink: 5;
+}
+
