@@ -1,9 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
 .my-container {
-    width: 80%;
-    display: flex;
-    flex-direction: column-reverse;
-    margin: 60px auto;
     background-color: #8a00cf;
+    width: 80%;
+    height: 300px;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+    margin: 60px auto;
     border-radius: 8px;
 }
 
@@ -12,4 +18,5 @@
     border: 4px solid black;
     border-radius: 10px;
     padding: 30px;
+    flex-basis: 25%;
 }
