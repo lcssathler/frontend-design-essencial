@@ -9,12 +9,13 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    align-items: baseline;
     margin: 60px auto;
     border-radius: 8px;
 }
 
 .my-item {
-    height: 150px;
+    /* height: 150px; */
     background-color: #21f8bb;
     border: 4px solid black;
     border-radius: 10px;
