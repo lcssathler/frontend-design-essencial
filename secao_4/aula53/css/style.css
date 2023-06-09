@@ -1,6 +1,31 @@
+@keyframes dash-animation {
+  from {
+    fill: transparent;
+    stroke-width: 2;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+
+  to {
+    fill: #d127b533;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+  }
+}
+
+div {
+  width: 500px;
+  height: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
 .st0 {
-  fill: none;
-  stroke: #cf7373;
-  stroke-width: 4;
+  fill: transparent;
+  stroke: #991604;
+  stroke-width: 2;
   stroke-miterlimit: 10;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash-animation 5s linear forwards;
 }
