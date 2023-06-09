@@ -1,13 +1,32 @@
 @keyframes box-animation {
-  from {
+  0% {
     width: 200px;
     height: 200px;
     background-color: blue;
+    border-radius: 0;
   }
-  to {
-    width: 400px;
+
+  30% {
+    width: 200px;
     height: 100px;
-    background-color: red;
+    background-color: rgb(200, 255, 0);
+    transform: translate(300px, 300px) rotate(0deg);
+    border-radius: 0;
+  }
+
+  70% {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(229, 255, 0);
+    transform: translate(0, 0) rotate(0deg);
+    border-radius: 50%;
+  }
+
+  100% {
+    width: 200px;
+    height: 100px;
+    background-color: blue;
+    transform: translate(600px, 400px) rotate(360deg);
   }
 }
 
@@ -18,10 +37,10 @@ body {
 
 main {
   width: 80%;
-  height: 800px;
+  height: 500px;
   display: table;
   background-color: rgb(211, 211, 211);
-  margin: 100px auto;
+  margin: 50px auto;
 }
 
 .square {
@@ -29,6 +48,6 @@ main {
   width: 200px;
   height: 200px;
   background-color: blue;
-  transition: all 3s ease-in;
-  animation: box-animation 3s forwards;
+  transition: all 6s ease-in;
+  animation: box-animation 6s forwards;
 }

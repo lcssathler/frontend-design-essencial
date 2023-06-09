@@ -21,29 +21,17 @@
     border: 4px solid black;
     border-radius: 10px;
     padding: 30px;
-    flex-basis: 300px;
-}
-.grow-1 {
-    flex-grow: 1;
+    flex-basis: 10%;
 }
 
-.grow-3 {
-    flex-grow: 3;
+.self-top {
+    align-self: flex-start;
 }
 
-.grow-5 {
-    flex-grow: 5;
+.self-center {
+    align-self: center;
 }
 
-.shrink-1 {
-    flex-shrink: 1;
+.self-bottom {
+    align-self: flex-end;
 }
-
-.shrink-3 {
-    flex-shrink: 3;
-}
-
-.shrink-5 {
-    flex-shrink: 5;
-}
-
