@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    width: 400px;
+    height: 40px;
+    background-color: gray;
+    text-align: center;
+    border: 2px solid red;
+    margin: 10px auto;
+}
