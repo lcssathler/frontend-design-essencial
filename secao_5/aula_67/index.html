@@ -1,23 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selectors</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <h1 class="item-blue">Blue 1</h1>
-    <h1 class="item-blue">Blue 2</h1>
-    <h1 class="item-blue">Blue 3</h1>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Selectors</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<h1 class="item-blue">Blue 1</h1>
+		<h1 class="item-blue">Blue 2</h1>
+		<h1 class="item-blue">Blue 3</h1>
 
-    <h1 class="item-red">Red 1</h1>
-    <h1 class="item-red">Red 2</h1>
-    <h1 class="item-red">Red 3</h1>
+		<h1 class="item-red">Red 1</h1>
+		<h1 class="item-red">Red 2</h1>
+		<h1 class="item-red">Red 3</h1>
 
-    <script> 
-        var blue = document.querySelectorAll('.item-blue')
-        console.log(blue);
-    </script>
-</body>
+		<div class="my-button">
+			<button class="button" onclick="makeBlue()">Make it blue</button>
+			<button class="button" onclick="makeRed()">Make it Red</button>
+		</div>
+
+		<script>
+			var blue = document.querySelectorAll(".item-blue");
+			var red = document.querySelectorAll(".item-red");
+
+			function makeBlue() {
+				for (let i = 0; blue.length > i; i++) {
+					blue[i].style.color = "blue";
+				}
+
+				document.body.style.backgroundColor = "blue";
+			}
+
+			function makeRed() {
+				for (let i = 0; red.length > i; i++) {
+                    red[i].style.color = "red";
+                }
+                document.body.style.backgroundColor = 'red';
+			}
+		</script>
+	</body>
 </html>
