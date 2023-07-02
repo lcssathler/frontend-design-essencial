@@ -49,17 +49,25 @@
 				let messageName = formName.querySelector("span");
 				let messageEmail = formEmail.querySelector("span");
 
-				console.log(nameValue);
-				console.log(emailValue);
-
-				if (nameValue.length >= 3) {
-					messageName.classList.add("sucess");
-					messageName.innerText = "Login OK!";
-				} else {
-					messageName.classList.add("error");
-					messageName.innerText = "Name error!";
+				switch (nameValue.length) {
+					case 0:
+						messageName.innerText = "Field is empty";
+						messageName.classList.add("error");
+						break;
+					case 1:
+					case 2:
+						messageName.innerText = "Min 3 characters!";
+						messageName.classList.add("error");
+						break;
+					case 3:
+						messageName.innerText = "Name OK! But it's too short...";
+						messageName.classList.add("sucess");
+						break;
+					default:
+						messageName.innerText = "Login OK!";
+						messageName.classList.add("sucess");
+						break;
 				}
-				messageName.style.display = "block";
 
 				if (regexEmail.test(emailValue)) {
 					messageEmail.classList.add("sucess");
