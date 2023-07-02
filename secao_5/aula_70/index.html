@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login Validator</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<form class="box">
+			<div class="form" id="form-field-name">
+				<input
+					type="text"
+					name="name"
+					id="name"
+					class="box-input"
+					placeholder="Input your name"
+				/>
+				<span></span>
+			</div>
+
+			<div class="form" id="form-field-email">
+				<input
+					type="email"
+					name="email"
+					id="email"
+					class="box-input"
+					placeholder="Input your email"
+				/>
+				<span></span>
+			</div>
+
+			<button type="button" class="button" onclick="validateForm()">
+				Validate
+			</button>
+		</form>
+
+		<script>
+			var nameStr = document.getElementById("name");
+			var emailStr = document.getElementById("email");
+			var regexEmail =
+				/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
+			function validateForm() {
+				let nameValue = nameStr.value;
+				let emailValue = emailStr.value;
+				let formName = document.getElementById("form-field-name");
+				let formEmail = document.getElementById("form-field-email");
+				let messageName = formName.querySelector("span");
+				let messageEmail = formEmail.querySelector("span");
+
+				console.log(nameValue);
+				console.log(emailValue);
+
+				if (nameValue.length >= 3) {
+					messageName.classList.add("sucess");
+					messageName.innerText = "Login OK!";
+				} else {
+					messageName.classList.add("error");
+					messageName.innerText = "Name error!";
+				}
+				messageName.style.display = "block";
+
+				if (regexEmail.test(emailValue)) {
+					messageEmail.classList.add("sucess");
+					messageEmail.innerText = "Email OK!";
+				} else {
+					messageEmail.classList.add("error");
+					messageEmail.innerText = "Email error!";
+				}
+				messageEmail.style.display = "block";
+				console.log(regexEmail.test(emailValue))
+			}
+		</script>
+	</body>
+</html>
