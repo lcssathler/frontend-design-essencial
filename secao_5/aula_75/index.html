@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <ul class="fruits" id="fruits">
+
+    </ul>
+
+    <script>
+        var listFruits= document.getElementById('fruits');
+        var fruits = ["Apple", "Strawberry", "Kiwii"];
+        var listFruitsToHTML = [];
+        console.log(listFruitsToHTML);
+
+        for(let i = 0; i < fruits.length; i++) {
+            listFruitsToHTML.push("<li>" + fruits[i] + "</li>");
+        }
+
+        listFruits.insertAdjacentHTML("beforeend", listFruitsToHTML.join(""));
+        console.log(listFruits);
+    </script>
+</body>
+</html>
