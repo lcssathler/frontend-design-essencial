@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+    <script>
+        var players = ["Lucas", "Joseph", "August", "Rychard"];
+
+        const myInfo = {
+            "name": "Lucas",
+            "age": 21,
+            "nacionality": "Brazilian"
+        };
+
+        /*
+        for (let i = 0; i < players.length; i++) {
+            console.log(players[i]);
+        }
+
+        for (player in players) {
+            console.log(player); //0, 1, 2, 3
+            console.log(players[player]); //Lucas, Joseph, August, Rychard
+        } 
+
+        var cont = 0;
+        while (players.length > cont) {
+            console.log(players[cont]);
+            cont++;
+        }
+        */
+
+        Object.entries(myInfo).map(function (p) {
+            console.log(p)
+        })
+
+    </script>
+</body>
+</html>
