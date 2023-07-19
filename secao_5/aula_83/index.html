@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Selectors</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<h1 class="item-blue">Blue 1</h1>
+		<h1 class="item-blue">Blue 2</h1>
+		<h1 class="item-blue">Blue 3</h1>
+
+		<h1 class="item-red">Red 1</h1>
+		<h1 class="item-red">Red 2</h1>
+		<h1 class="item-red">Red 3</h1>
+
+		<div class="my-button">
+			<button class="button" id="make-blue">Make it blue</button>
+			<button class="button" id="make-red">Make it Red</button>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+		<script>
+			$(function() {
+				var allBlues = $('.item-blue');
+				var allReds = $('.item-red');
+				var btnBlue = $('#make-blue');
+				var btnRed = $('#make-red');
+
+				btnBlue.click(function() {
+					allBlues.css('background-color', 'blue');
+
+					$('body').css("background-color", "lightgreen");
+				});
+
+				btnRed.click(function() {
+					allReds.css({
+						color: "white",
+						"background-color": "red",
+					});
+
+					$('body').css('background-color', 'purple')
+				})
+			})
+		</script>
+	</body>
+</html>
