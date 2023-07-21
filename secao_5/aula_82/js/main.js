@@ -1,51 +1,55 @@
 myCats = {
-    cat: [
-        {
-            "id": 1,
-            "name": "Chico",
-            "description": "O Chico cansou de ser cat e virou Dinossauro.",
-            "imgUrl": "images/gato-01.jpg",
-            "externalLink": "https://www.instagram.com/canseidesergato/"
-        },
+	cat: [
+		{
+			id: 1,
+			name: "Chico",
+			description: "O Chico cansou de ser cat e virou Dinossauro.",
+			imgUrl: "images/gato-01.jpg",
+			externalLink: "https://www.instagram.com/canseidesergato/",
+		},
 
-        {
-            "id": 2,
-            "name": "Hamilton",
-            "description": "Hamilton é o gato mais hipster que você vai ver hoje.",
-            "imgUrl": "images/gato-02.jpg",
-            "externalLink": "https://www.instagram.com/hamilton_the_hipster_cat/"
-        },
+		{
+			id: 2,
+			name: "Hamilton",
+			description:
+				"Hamilton é o gato mais hipster que você vai ver hoje.",
+			imgUrl: "images/gato-02.jpg",
+			externalLink: "https://www.instagram.com/hamilton_the_hipster_cat/",
+		},
 
-        {
-            "id": 3,
-            "name": "Nala",
-            "description": "Nala é uma gatinha muito simpática e extrovertida.",
-            "imgUrl": "images/gato-03.jpg",
-            "externalLink": "https://www.instagram.com/nala_cat/"
-        },
-    ]
-}
+		{
+			id: 3,
+			name: "Nala",
+			description: "Nala é uma gatinha muito simpática e extrovertida.",
+			imgUrl: "images/gato-03.jpg",
+			externalLink: "https://www.instagram.com/nala_cat/",
+		},
+	],
+};
 
-var cardCat = document.getElementById('card');
-var cardBody = document.querySelector(".card-body");
-var btn = document.getElementById('btn');
+$(function () {
+	var cardCat = $("#card");
+	var cardBody = $(".card-body");
+	var btn = $("#btn");
 
-function getCat() {
-    let catNameInput = document.getElementById('myInput').value.toLowerCase();
 
-    for(let i = 0; i < myCats.cat.length; i++) {
-        let currentCat = myCats.cat[i];
-        if(catNameInput == currentCat.name.toLowerCase()) {
-            console.log("This cat belongs on the list");
+	function getCat() {
+        var input = $("input").val().toLowerCase();
+		for (var i = 0; myCats.cat.length > i; i++) {
+            console.log(input);
+			var cat = myCats.cat[i];
 
-            cardCat.querySelector("img").setAttribute("src", currentCat.imgUrl);
-            cardBody.querySelector("h1").innerHTML = currentCat.name;
-            cardBody.querySelector("p").innerHTML = currentCat.description;
-            return;
-        } else {
-            console.log("This cat doesn't belongs on the list");
-        }
-    }
-}
+			if (input == cat.name.toLowerCase()) {
+				$("#card img").attr("src", cat.imgUrl);
+				$(".card-body h1").html(cat.name);
+				$(".card-body p").html(cat.description);
+			} else {
+                $("#card img").attr("src", "images/gato-00.jpg");
+                $(".card-body h1").html("Cat not found :(");
+                $(".card-body p").html("");
+            }
+		}
+	}
 
-btn.addEventListener('click', getCat);
+	btn.click(getCat);
+});
