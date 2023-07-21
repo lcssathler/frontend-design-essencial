@@ -32,11 +32,11 @@ $(function () {
 	var cardBody = $(".card-body");
 	var btn = $("#btn");
 
-
 	function getCat() {
         var input = $("input").val().toLowerCase();
+        
 		for (var i = 0; myCats.cat.length > i; i++) {
-            console.log(input);
+			console.log(input);
 			var cat = myCats.cat[i];
 
 			if (input == cat.name.toLowerCase()) {
@@ -44,10 +44,10 @@ $(function () {
 				$(".card-body h1").html(cat.name);
 				$(".card-body p").html(cat.description);
 			} else {
-                $("#card img").attr("src", "images/gato-00.jpg");
-                $(".card-body h1").html("Cat not found :(");
-                $(".card-body p").html("");
-            }
+				$("#card img").attr("src", "images/gato-00.jpg");
+				$(".card-body h1").html("Cat not found :(");
+				$(".card-body p").html("");
+			}
 		}
 	}
 

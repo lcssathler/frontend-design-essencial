@@ -18,15 +18,22 @@
 		<div class="my-button">
 			<button class="button" id="make-blue">Make it blue</button>
 			<button class="button" id="make-red">Make it Red</button>
+			<button class="button" id="class-add">Add</button>
+			<button class="button" id="class-remove">Remove</button>
+			<button class="button" id="class-toggle">toggle</button>
 		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 		<script>
 			$(function() {
+				var items = $("h1");
 				var allBlues = $('.item-blue');
 				var allReds = $('.item-red');
 				var btnBlue = $('#make-blue');
 				var btnRed = $('#make-red');
+				var add = $('#class-add');
+				var remove = $('#class-remove');
+				var toggle = $('#class-toggle');
 
 				btnBlue.click(function() {
 					allBlues.css('background-color', 'blue');
@@ -41,6 +48,18 @@
 					});
 
 					$('body').css('background-color', 'purple')
+				});
+
+				add.click(function (){
+					items.addClass("change-items");
+				});
+
+				remove.click(function() {
+					items.removeClass("change-items");
+				});
+
+				toggle.click(function() {
+					items.toggleClass("change-items");
 				})
 			})
 		</script>
