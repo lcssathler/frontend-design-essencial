@@ -40,7 +40,9 @@
 		border: 30px solid #000;
 	}
 
-    
+    .ls-menu {
+		display: none;
+	}
 }
 
 @media screen and (min-width: 576px) {
@@ -49,6 +51,50 @@
 }
 
 @media screen and (min-width: 992px) {
+	.ls-menu {
+		display: table;
+		float: left;
+		height: 110px;
+		margin-left: 30px;
+		padding-top: 50px;
+	}
+
+	.ls-menu a {
+		font-family: 'Open Sans';
+		font-weight: 400;
+		font-size: 16px;
+		color: #e7e5e5;
+		text-decoration: none;
+		text-transform: lowercase;
+		margin: 50px 20px 0 20px;
+		position: relative;
+	}
+
+	.ls-menu a:first-child {
+		margin-left: 0;
+	}
+
+	.ls-menu a:hover {
+		color: #2CCB69;
+		font-weight: 600;
+	}
+
+	.ls-menu a:before {
+		content: "";
+		display: block;
+		background-color: #2CCB69;
+		width: 0%;
+		height: 3px;
+		position: absolute;
+		bottom: -6px;
+		left: 0;
+		transition: all 0.3s ease-in;
+	}
+
+	.ls-menu a:hover:before {
+		width: 100%;
+	}
+
 }
 
 @media screen and (min-width: 1200px) {
