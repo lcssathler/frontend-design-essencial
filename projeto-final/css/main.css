@@ -5,7 +5,6 @@
 }
 
 @media screen and (min-width: 320px) {
-
 	.ls-topbar {
 		width: 100%;
 		height: 110px;
@@ -19,19 +18,18 @@
 	.ls-logo {
 		width: 74px;
 		height: 110px;
-		background-color: #2CCB69;
+		background-color: #2ccb69;
 		float: left;
 		margin-left: 60px;
 		border-bottom-right-radius: 38px;
 	}
-	
+
 	.ls-logo img {
 		width: 46px;
 		height: 31px;
 		display: block;
 		margin: 55px auto 0 auto;
 	}
-
 
 	.ls-page-wrapper {
 		width: 100%;
@@ -40,7 +38,7 @@
 		border: 30px solid #000;
 	}
 
-    .ls-menu {
+	.ls-menu {
 		display: none;
 	}
 
@@ -48,8 +46,8 @@
 		width: 45px;
 		height: 45px;
 		display: block;
-		background-color: #2CCB69;
-		background-image: url('../images/icon-contact-close.svg');
+		background-color: #2ccb69;
+		background-image: url("../images/icon-contact-close.svg");
 		background-repeat: no-repeat;
 		position: fixed;
 		bottom: 45px;
@@ -59,7 +57,7 @@
 		transition: all 0.3s ease-in-out;
 	}
 
-	.ls-btn-contact:hover{
+	.ls-btn-contact:hover {
 		background-position-y: -45px;
 	}
 }
@@ -79,7 +77,7 @@
 	}
 
 	.ls-menu a {
-		font-family: 'Open Sans';
+		font-family: "Open Sans";
 		font-weight: 400;
 		font-size: 16px;
 		color: #e7e5e5;
@@ -94,14 +92,14 @@
 	}
 
 	.ls-menu a:hover {
-		color: #2CCB69;
+		color: #2ccb69;
 		font-weight: 600;
 	}
 
 	.ls-menu a:before {
 		content: "";
 		display: block;
-		background-color: #2CCB69;
+		background-color: #2ccb69;
 		width: 100%;
 		height: 3px;
 		position: absolute;
@@ -115,11 +113,44 @@
 	.ls-menu a:hover:before {
 		transform: scale(1, 1);
 	}
-
 }
 
 @media screen and (min-width: 1200px) {
 }
 
 @media screen and (min-width: 1364px) {
+}
+
+/*Utiliraty Classes*/
+
+.ls-text-green {
+	color: #2ccb69;
+}
+
+.ls-text-black {
+	color: #000;
+}
+
+.ls-text-light {
+	color: #bcbcbc;
+}
+
+.ls-text-dark {
+	color: #4d4c4c;
+}
+
+.ls-bg-green {
+	background-color: #2ccb69;
+}
+
+.ls-bg-black {
+	background-color: #000;
+}
+
+.ls-bg-light {
+	background-color: #bcbcbc;
+}
+
+.ls-bg-dark {
+	background-color: #4d4c4c;
 }
