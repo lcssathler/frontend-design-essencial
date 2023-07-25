@@ -4,6 +4,12 @@
 	box-sizing: border-box;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+} 
+
+@keyframes fadeOut {
+	to {
+		opacity: 0;
+	}
 }
 
 p {
@@ -37,11 +43,23 @@ p {
 		margin: 55px auto 0 auto;
 	}
 
-	.ls-page-wrapper {
+	.ls-page-wrapper, .ls-preloader-inner {
 		width: 100%;
 		height: 100vh;
 		background-color: #1c1c1c;
 		border: 30px solid #000;
+	}
+
+	.ls-preloader-inner {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		z-index: 10;
+
+
 	}
 
 	.ls-menu {
@@ -112,9 +130,11 @@ p {
 		position: fixed;
 		bottom: 45px;
 		right: 45px;
+		border: none;
 		border-radius: 50%;
 		z-index: 2;
 		transition: all 0.3s ease-in-out;
+		cursor: pointer;
 	}
 }
 
@@ -179,6 +199,21 @@ p {
 }
 
 /*Utiliraty Classes*/
+.ls-mar-top-15 {
+	margin-top: 15px;
+}
+
+.ls-mar-right-15 {
+	margin-right: 15px;
+}
+
+.ls-mar-bottom-15 {
+	margin-bottom: 15px;
+}
+
+.ls-mar-left-15 {
+	margin-left: 15px;
+}
 
 .ls-text-green {
 	color: #2ccb69;
@@ -225,4 +260,8 @@ p {
 
 .ls-change-position-icon {
 	background-position-y: -45px;
+}
+
+.ls-fade-out {
+	animation: fadeOut 2s forwards ease-out ;
 }
