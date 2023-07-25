@@ -55,6 +55,7 @@ p {
 	.ls-contact-info {
 		width: 245px;
 		height: 165px;
+		display: none;
 		padding: 25px;
 		position: fixed;
 		bottom: 120px;
@@ -110,14 +111,10 @@ p {
 		background-repeat: no-repeat;
 		position: fixed;
 		bottom: 45px;
-		right: 60px;
+		right: 45px;
 		border-radius: 50%;
 		z-index: 2;
 		transition: all 0.3s ease-in-out;
-	}
-
-	.ls-btn-contact:hover {
-		background-position-y: -45px;
 	}
 }
 
@@ -166,7 +163,7 @@ p {
 		left: 0;
 		transition: all 0.2s ease-in;
 		transform: scale(0, 1);
-		transform-origin: center;
+		transform-origin: left;
 	}
 
 	.ls-menu a:hover:before {
@@ -219,4 +216,13 @@ p {
 	font-family: "Abril Fatface";
 	font-weight: normal;
 	font-size: 24px;
+}
+
+/* STATE CLASSES*/
+.ls-is-open {
+	display: block;
+}
+
+.ls-change-position-icon {
+	background-position-y: -45px;
 }
