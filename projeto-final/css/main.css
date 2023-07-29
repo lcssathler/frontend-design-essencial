@@ -59,11 +59,9 @@ p {
 		position: fixed;
 		z-index: 10;
 
-
-	}
-
 	.ls-menu {
 		display: none;
+	}
 	}
 
 	.ls-box-info {
