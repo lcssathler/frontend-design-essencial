@@ -139,6 +139,18 @@ p {
 		transition: all 0.3s ease-in-out;
 		cursor: pointer;
 	}
+
+	/* --- HOME --- */
+	.ls-display-text {
+		margin-top: 6%;
+	}
+
+	.ls-home-presentation {
+		background-image: url("../images/joao-lemon-designer-home.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: 70% bottom;
+	}
 }
 
 @media screen and (min-width: 576px) {
@@ -256,10 +268,14 @@ p {
 	font-size: 24px;
 }
 
+.ls-title-size-80 {
+	font-size: 80px;
+	white-space: nowrap;
+	width: auto;
+}
+
 .ls-full-height {
 	height: 100vh;
-	background-color: rgb(183, 165, 201);
-	border-bottom: 5px solid red;
 }
 
 
