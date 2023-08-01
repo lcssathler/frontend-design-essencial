@@ -12,6 +12,12 @@
 	}
 }
 
+@keyframes scrollArrow {
+	to {
+		bottom: 10px;
+	}
+}
+
 p {
 	font-family: 'Open Sans', sans-serif;
 }
@@ -136,7 +142,7 @@ p {
 		border: none;
 		border-radius: 50%;
 		z-index: 2;
-		transition: all 0.3s ease-in-out;
+		transition: all 12s ease-in-out;
 		cursor: pointer;
 	}
 
@@ -150,6 +156,44 @@ p {
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: 70% bottom;
+		position: relative;
+	}
+
+	.ls-scroll-down {
+		width: 50px;
+		height: 90px;
+		display: block;
+		background-color: #2ccb69;
+		border-radius: 35px 35px 0 0;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	.ls-scroll-down .ls-scroll-arrow {
+		width: 15px;
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		bottom: 30px;
+		left: 16px;
+		margin: 0 auto;
+		animation: scrollArrow 1.5s infinite ease-out forwards;
+	}
+
+	.ls-scroll-arrow .ls-scroll-line {
+		display: block;
+		width: 2px;
+		height: 30px;
+		background-color: #000;
+		margin: 0 auto 0 auto;
+	}
+
+	.ls-scroll-arrow .img {
+		display: block;
+		width: 100%;
 	}
 }
 
@@ -291,5 +335,5 @@ p {
 }
 
 .ls-fade-out {
-	animation: fadeOut 2s forwards ease-out ;
+	animation: fadeOut 3s forwards ease-in-out ;
 }
