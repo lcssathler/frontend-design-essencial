@@ -12,12 +12,6 @@
 	}
 }
 
-@keyframes scrollArrow {
-	to {
-		bottom: 10px;
-	}
-}
-
 p {
 	font-family: 'Open Sans', sans-serif;
 }
@@ -69,10 +63,10 @@ p {
 		align-items: center;
 		position: fixed;
 		z-index: 10;
+	}
 
 	.ls-menu {
 		display: none;
-	}
 	}
 
 	.ls-box-info {
@@ -142,7 +136,7 @@ p {
 		border: none;
 		border-radius: 50%;
 		z-index: 2;
-		transition: all 12s ease-in-out;
+		transition: all 0.3s ease-in-out;
 		cursor: pointer;
 	}
 
@@ -155,7 +149,7 @@ p {
 		background-image: url("../images/joao-lemon-designer-home.png");
 		background-size: contain;
 		background-repeat: no-repeat;
-		background-position: 70% bottom;
+		background-position: 50% bottom;
 		position: relative;
 	}
 
@@ -172,28 +166,32 @@ p {
 		margin: 0 auto;
 	}
 
-	.ls-scroll-down .ls-scroll-arrow {
+	.ls-scroll-arrow {
 		width: 15px;
-		display: flex;
-		flex-direction: column;
 		position: absolute;
-		bottom: 30px;
-		left: 16px;
+		bottom: 10px;
+		left: 0;
+		right: 0;
 		margin: 0 auto;
-		animation: scrollArrow 1.5s infinite ease-out forwards;
 	}
 
-	.ls-scroll-arrow .ls-scroll-line {
+	.ls-scroll-arrow:before {
+		content: "";
 		display: block;
+		background-color: #000;
 		width: 2px;
 		height: 30px;
-		background-color: #000;
-		margin: 0 auto 0 auto;
+		position: absolute;
+		bottom: 15px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
 	}
 
 	.ls-scroll-arrow .img {
 		display: block;
-		width: 100%;
+		width: 16px;
+		height: 45px;
 	}
 }
 
@@ -312,8 +310,8 @@ p {
 	font-size: 24px;
 }
 
-.ls-title-size-80 {
-	font-size: 80px;
+.ls-title-size-70 {
+	font-size: 70px;
 	white-space: nowrap;
 	width: auto;
 }
