@@ -4,16 +4,62 @@
 	box-sizing: border-box;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-} 
+}
 
 @keyframes fadeOut {
-	to {
+	0% {
+		transform: scale(1, 0);
+		transform-origin: top center;
+	}
+
+	25% {
+		transform: scale(1, 0);
+		transform-origin: top center;
+	}
+
+	75% {
+		transform: scale(1, 1);
+		transform-origin: top center;
+	}
+
+	76% {
+		transform: scale(1, 1);
+		transform-origin: bottom center;
+	}
+
+	100% {
+		transform: scale(1, 0);
+		transform-origin: bottom center;  
+
+	}
+}
+
+@keyframes lineDown {
+	0% {
 		opacity: 0;
+		transform: scale(1, 0);
+		transform-origin: top center;
+	}
+
+	50% {
+		opacity: 1;
+	}
+}
+
+@keyframes arrowDown {
+	0% {
+		bottom: 25px;
+		opacity: 0	;
+	}
+
+	30% {
+		bottom: 8px;
+		opacity: 1;
 	}
 }
 
 p {
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans", sans-serif;
 }
 
 @media screen and (min-width: 320px) {
@@ -43,7 +89,8 @@ p {
 		margin: 55px auto 0 auto;
 	}
 
-	.ls-page-wrapper, .ls-preloader-inner {
+	.ls-page-wrapper,
+	.ls-preloader-inner {
 		width: 100%;
 		height: 100vh;
 		display: table;
@@ -79,7 +126,7 @@ p {
 		display: none;
 		padding: 25px;
 		position: fixed;
-		bottom: 120px;
+		bottom: 115px;
 		right: 65px;
 		z-index: 2;
 	}
@@ -122,7 +169,6 @@ p {
 		display: block;
 	}
 
-
 	.ls-btn-contact {
 		width: 45px;
 		height: 45px;
@@ -131,7 +177,7 @@ p {
 		background-image: url("../images/icon-contact-close.svg");
 		background-repeat: no-repeat;
 		position: fixed;
-		bottom: 45px;
+		bottom: 30px;
 		right: 45px;
 		border: none;
 		border-radius: 50%;
@@ -168,8 +214,9 @@ p {
 
 	.ls-scroll-arrow {
 		width: 15px;
+		height: 65px;
 		position: absolute;
-		bottom: 10px;
+		bottom: 15px;
 		left: 0;
 		right: 0;
 		margin: 0 auto;
@@ -180,18 +227,25 @@ p {
 		display: block;
 		background-color: #000;
 		width: 2px;
-		height: 30px;
+		height: 45px;
 		position: absolute;
 		bottom: 15px;
 		left: 0;
 		right: 0;
 		margin: 0 auto;
+		animation: lineDown 2s infinite ease-out;
 	}
 
-	.ls-scroll-arrow .img {
+	.ls-scroll-arrow img {
 		display: block;
-		width: 16px;
-		height: 45px;
+		width: 15px;
+		height: 10 px;
+		position: absolute;
+		bottom: 8px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		animation: arrowDown 2s infinite ease-out;
 	}
 }
 
@@ -246,7 +300,6 @@ p {
 	.ls-menu a:hover:before {
 		transform: scale(1, 1);
 	}
-
 }
 
 @media screen and (min-width: 1200px) {
@@ -320,9 +373,6 @@ p {
 	height: 100vh;
 }
 
-
-
-
 /* STATE CLASSES*/
 .ls-is-open {
 	display: block;
@@ -333,5 +383,5 @@ p {
 }
 
 .ls-fade-out {
-	animation: fadeOut 3s forwards ease-in-out ;
+	animation: fadeOut 3s forwards ease-in-out;
 }
