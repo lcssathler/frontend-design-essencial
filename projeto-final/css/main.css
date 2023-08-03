@@ -7,30 +7,8 @@
 }
 
 @keyframes fadeOut {
-	0% {
-		transform: scale(1, 0);
-		transform-origin: top center;
-	}
-
-	25% {
-		transform: scale(1, 0);
-		transform-origin: top center;
-	}
-
-	75% {
-		transform: scale(1, 1);
-		transform-origin: top center;
-	}
-
-	76% {
-		transform: scale(1, 1);
-		transform-origin: bottom center;
-	}
-
-	100% {
-		transform: scale(1, 0);
-		transform-origin: bottom center;  
-
+	to {
+		opacity: 0;
 	}
 }
 
@@ -233,7 +211,7 @@ p {
 		left: 0;
 		right: 0;
 		margin: 0 auto;
-		animation: lineDown 2s infinite ease-out;
+		animation: lineDown 1.5s infinite ease-out;
 	}
 
 	.ls-scroll-arrow img {
@@ -245,7 +223,7 @@ p {
 		left: 0;
 		right: 0;
 		margin: 0 auto;
-		animation: arrowDown 2s infinite ease-out;
+		animation: arrowDown 1.5s infinite ease-out;
 	}
 }
 
@@ -307,6 +285,23 @@ p {
 
 @media screen and (min-width: 1364px) {
 }
+
+/* Buttons */
+.ls-btn {
+	display: table;
+	background-color: #2ccb69;
+	color: #000;
+	font: normal 600 14px 'Open Sans', sans-serif;
+	height: 45px;
+	line-height: 45px;
+	text-decoration: none;
+	text-align: center;
+	border-radius: 23px;
+	border: none;
+	padding: 0 30px;
+	margin: 0 auto;
+}
+
 
 /*Utiliraty Classes*/
 .ls-mar-top-15 {
