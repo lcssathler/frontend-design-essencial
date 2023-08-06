@@ -1,4 +1,5 @@
 var btnContact = document.querySelector(".ls-btn-contact");
+var toggleModal = document.querySelectorAll('.ls-toggle-modal');
 
 window.addEventListener("load", () => {
 	var pagePreloader = document.querySelector(".ls-preloader-inner");
@@ -13,3 +14,13 @@ btnContact.addEventListener("click", function () {
 	boxInfo.classList.toggle("ls-is-open");
 	this.classList.toggle("ls-change-position-icon");
 });
+
+for(i = 0; i < toggleModal.length; i++) {
+	toggleModal[i].addEventListener('click', () => {
+		var overlay = document.querySelector('.ls-overlay')
+		var budgetModal = document.querySelector('#ls-budget-modal');
+
+		overlay.classList.toggle("ls-is-open");
+		budgetModal.classList.toggle("ls-is-open");
+	})
+}

@@ -95,7 +95,7 @@ p {
 	.ls-overlay {
 		width: 100%;
 		height: 100vh;
-		display: table;
+		display: none;
 		position: fixed;
 		background-color: rgba(49, 49, 49, 0.8);
 		z-index: 3;
@@ -103,7 +103,7 @@ p {
 
 	.ls-modal {
 		width: 700px;
-		display: table;
+		display: none;
 		position: absolute;
 		top: 15%;
 		right: 0;
@@ -199,6 +199,7 @@ p {
 	.ls-contact-info {
 		width: 245px;
 		height: 165px;
+		display: none;
 		border: none;
 		padding: 25px;
 		position: fixed;
@@ -226,7 +227,7 @@ p {
 	}
 
 	.ls-social > img {
-		height: 100%;
+		height: 50%;
 	}
 
 	.ls-corner {
@@ -345,7 +346,9 @@ p {
 		color: #e7e5e5;
 		border: none;
 		text-transform: lowercase;
+		text-decoration: none;
 		position: relative;
+		margin: 5px;
 	}
 
 	.ls-menu a:first-child {
@@ -390,6 +393,7 @@ p {
 	text-align: center;
 	border: none;
 	transition: all 0.15s ease-out;
+	cursor: pointer;
 }
 
 .ls-btn-medium {
@@ -478,7 +482,7 @@ p {
 }
 
 .ls-title {
-	font-family: "Abril Fatface";
+	font-family: "Trocchi";
 	font-weight: normal;
 	font-size: 24px;
 }

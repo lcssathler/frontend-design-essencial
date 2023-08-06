@@ -8,9 +8,12 @@
 			rel="stylesheet"
 		/>
 		<link
+			href="https://fonts.googleapis.com/css2?family=Trocchi&display=swap"
 			rel="stylesheet"
-			href="css/bootstrap-grid.min.css"
-			type="text/css"
+		/>
+		<link
+			rel="stylesheet"
+			href="css/bootstrap-grid.min.css"			type="text/css"
 		/>
 		<link rel="stylesheet" href="css/main.css" type="text/css" />
 		<title>Portifólio</title>
@@ -25,12 +28,12 @@
 			<p class="ls-mar-top-15">Squeezing some lemons... hold on!</p>
 		</div>
 
-		<div class="ls-overlay"></div>
+		<div class="ls-overlay ls-toggle-modal"></div>
 
-		<div class="ls-modal ls-bg-black">
+		<div class="ls-modal ls-bg-black" id="ls-budget-modal">
 			<div class="ls-modal-header">
 				<h1 class="ls-title ls-text-green">Request for my services!</h1>
-				<div class="ls-modal-close ls-text-light">x</div>
+				<div class="ls-modal-close ls-text-light ls-toggle-modal">x</div>
 			</div>
 
 			<div class="ls-modal-body ls-mar-top-15">
@@ -161,7 +164,7 @@
 						</p>
 						<button
 							href="#"
-							class="ls-btn ls-btn-large ls-btn-green ls-mar-top-15"
+							class="ls-btn ls-btn-large ls-btn-green ls-toggle-modal ls-mar-top-15"
 						>
 							Request me!
 						</button>
