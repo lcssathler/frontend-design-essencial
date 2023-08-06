@@ -27,7 +27,7 @@
 @keyframes arrowDown {
 	0% {
 		bottom: 25px;
-		opacity: 0	;
+		opacity: 0;
 	}
 
 	30% {
@@ -39,6 +39,8 @@
 p {
 	font-family: "Open Sans", sans-serif;
 }
+
+
 
 @media screen and (min-width: 320px) {
 	.ls-topbar {
@@ -106,7 +108,6 @@ p {
 		top: 15%;
 		right: 0;
 		left: 0;
-		border-radius: 0 20px 20px 20px;
 		margin: 0 auto;
 		padding: 30px;
 		z-index: 3;
@@ -114,28 +115,81 @@ p {
 
 	.ls-modal .ls-modal-header {
 		width: 100%;
-		display: block;
+		display: table;
 		position: relative;
 	}
 
 	.ls-modal-header .ls-modal-close {
 		width: 37px;
 		height: 37px;
-		font-family: 'Open Sans';
+		font-family: "Open Sans";
 		background-color: #1c1c1c;
 		color: #2ccb69;
 		display: block;
-		position: absolute;
-		top: -20px;
-		right: -20px;
 		text-align: center;
 		line-height: 37px;
 		border-radius: 18px;
 		cursor: pointer;
+		position: absolute;
+		top: -20px;
+		right: -20px;
+	}
+
+	.ls-modal-body {
+		display: block;
+		width: 100%;
+	}
+
+	.ls-form {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		gap: 15px;
+	}
+
+	.ls-form-row-medium {
+		flex-basis: 47%;
+	}
+
+	.ls-form-row-large {
+		flex-basis: 100%;
+	}
+
+	form label {
+		font-family: "Open Sans", sans-serif;
+		font-size: 14px;
+	}
+
+	.ls-field {
+		background-color: #2f2f2f;
+		color: #bcbcbc;	
+		width: 100%;
+		font-size: 16px;
+		text-indent: 15px;
+		border: none;
+		border-radius: 4px;
+		margin-top: 5px;
+	}
+
+	.ls-field-medium {
+		height: 45px;
+	}
+	.ls-field-large {
+		height: 90px;
+	}
+
+	.ls-require {
+		align-self: flex-end;
+	}
+
+	.ls-require button {
+		display: block;
+		width: 100%;
 	}
 
 	.ls-menu {
-		display: none;
+		border: none;
 	}
 
 	.ls-box-info {
@@ -145,7 +199,7 @@ p {
 	.ls-contact-info {
 		width: 245px;
 		height: 165px;
-		display: none;
+		border: none;
 		padding: 25px;
 		position: fixed;
 		bottom: 115px;
@@ -169,7 +223,6 @@ p {
 
 	.ls-social {
 		width: 45px;
-		height: 20px;
 	}
 
 	.ls-social > img {
@@ -290,9 +343,8 @@ p {
 		font-weight: 400;
 		font-size: 16px;
 		color: #e7e5e5;
-		text-decoration: none;
+		border: none;
 		text-transform: lowercase;
-		margin: 50px 20px 0 20px;
 		position: relative;
 	}
 
@@ -333,7 +385,7 @@ p {
 /* Buttons */
 .ls-btn {
 	display: table;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-weight: 600;
 	text-align: center;
 	border: none;
@@ -344,7 +396,7 @@ p {
 	height: 38px;
 	padding: 0 27px;
 	border-radius: 19px;
-	font-size: 14px	;
+	font-size: 14px;
 }
 
 .ls-btn-large {
