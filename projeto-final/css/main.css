@@ -511,6 +511,10 @@ p {
 	height: 100vh;
 }
 
+.ls-no-padding {
+	padding: 0;
+}
+
 /* STATE CLASSES*/
 .ls-is-open {
 	display: block;
