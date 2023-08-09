@@ -6,8 +6,7 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-@keyframes fadeIn{
-
+@keyframes fadeIn {
 	to {
 		opacity: 1;
 	}
@@ -52,8 +51,6 @@
 p {
 	font-family: "Open Sans", sans-serif;
 }
-
-
 
 @media screen and (min-width: 320px) {
 	.ls-topbar {
@@ -177,7 +174,7 @@ p {
 
 	.ls-field {
 		background-color: #2f2f2f;
-		color: #bcbcbc;	
+		color: #bcbcbc;
 		width: 100%;
 		font-size: 16px;
 		text-indent: 15px;
@@ -344,7 +341,6 @@ p {
 		width: 145px;
 		height: 400px;
 		display: table;
-		background-color: red;
 		position: absolute;
 		left: 15px;
 		top: 30vh;
@@ -354,21 +350,45 @@ p {
 		width: 100%;
 		height: 90px;
 		display: block;
-		background-color: blue;
+		position: relative;
+		margin-bottom: 60px;
+	}
+
+	.ls-item-counter span {
+		font-family: "Open Sans", sans-serif;
+		font-size: 120px;
+		font-weight: 600;
+		line-height: 90px;
+	}
+
+	.ls-item-counter:before {
+		content: "";
+		width: 35px;
+		height: 100%;
+		display: block;
+		background-color: #1c1c1c;
+		position: absolute;
+		top: 2px;
+		left: 0;
 	}
 
 	.ls-item-navigator {
 		width: 100%;
 		display: table;
-		background-color: purple;
 	}
 
 	.ls-item-navigator a {
+		background-color: #4d4c4c;
 		width: 20px;
 		height: 1px;
-		background-color: green;
 		display: block;
 		margin-bottom: 80px;
+		margin-left: 35px;
+	}
+
+	.ls-item-navigator a.ls-item-active {
+		background-color: #2ccb69;
+		width: 90px;
 	}
 
 	.ls-item-navigator a:last-child {
@@ -376,9 +396,10 @@ p {
 	}
 
 	.ls-portfolio-next-prev {
+		background-color: #2C2C2C;
 		width: 100%;
 		height: 45px;
-		background-color: deeppink;
+		border-radius: 0 20px 20px 0;
 	}
 }
 
@@ -577,5 +598,5 @@ p {
 }
 
 .ls-slide-top-in {
-	animation: slideTopIn 0.6s forwards cubic-bezier(.47,1.1,.62,1.13);
+	animation: slideTopIn 0.6s forwards cubic-bezier(0.47, 1.1, 0.62, 1.13);
 }
