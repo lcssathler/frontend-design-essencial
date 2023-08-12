@@ -39,3 +39,22 @@ var waypoint = new Waypoint(
 		offset: '80%'
 	}
 );
+
+// PORTFOLIO SLIDER
+
+var sliderContainer = document.querySelector(".ls-slider-container");
+var sliderList = document.querySelector(".ls-slider-list");
+var sliderItem = document.querySelectorAll(".ls-slider-item");
+
+var containerWidth = sliderContainer.parentElement.offsetWidth;
+var sliderListWidth = containerWidth * sliderItem.length;
+console.log(sliderListWidth);
+
+sliderContainer.style.width = containerWidth + "px";
+
+for(let i = 0; i < sliderItem.length; i++) {
+	sliderItem[i].style.width = containerWidth + "px";
+}
+
+sliderList.style.width = sliderListWidth + "px";
+

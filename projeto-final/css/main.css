@@ -88,7 +88,7 @@ p {
 		border: 30px solid #000;
 	}
 
-	.ls-page-wrapper section:first-child {
+	.ls-first-section {
 		height: calc(100vh - 30px);
 	}
 
@@ -245,9 +245,7 @@ p {
 		width: 100%;
 		position: relative;
 		left: 195px;
-		/* display: inline-flex; */
-		/* justify-content: end; */
-		/* margin-left: 25px; */
+
 	}
 
 	.ls-corner .ls-corner-icon {
@@ -306,7 +304,7 @@ p {
 		bottom: 15px;
 		left: 0;
 		right: 0;
-		margin: 0 auto;
+		margin: 0 auto 10px auto;
 	}
 
 	.ls-scroll-arrow:before {
@@ -350,15 +348,8 @@ p {
 		width: 100%;
 		height: 90px;
 		display: block;
-		position: relative;
 		margin-bottom: 60px;
-	}
-
-	.ls-navigator-counter span {
-		font-family: "Open Sans", sans-serif;
-		font-size: 120px;
-		font-weight: 600;
-		line-height: 90px;
+		position: relative;
 	}
 
 	.ls-navigator-counter:before {
@@ -372,6 +363,13 @@ p {
 		left: 0;
 	}
 
+	.ls-navigator-counter span {
+		font-family: "Open Sans", sans-serif;
+		font-size: 120px;
+		font-weight: 600;
+		line-height: 90px;
+	}
+
 	.ls-item-navigator {
 		width: 100%;
 		display: table;
@@ -382,17 +380,17 @@ p {
 		width: 20px;
 		height: 1px;
 		display: block;
-		margin-bottom: 80px;
+		margin-bottom: 30%;
 		margin-left: 35px;
 	}
 
 	.ls-item-navigator a.ls-item-active {
-		background-color: #2ccb69;
 		width: 90px;
+		background-color: #2ccb69;
 	}
 
 	.ls-item-navigator a:last-child {
-		margin-bottom: 30px !important;
+		margin-bottom: 30px;
 	}
 
 	.ls-items-next-prev {
@@ -426,6 +424,26 @@ p {
 	.item-next, .item-prev {
 		color: #2ccb69;
 		cursor: pointer;
+	}
+
+	.ls-slider-container {
+		background-color: white;
+		display: block;
+		overflow: hidden;
+	}
+
+	.ls-slider-list {
+		width: auto;
+		height: 700px;
+		display: block;
+		background-color: deeppink;
+		list-style: none;
+	}
+
+	.ls-slider-item {
+		display: block;
+		height: 500px;
+		float: left;
 	}
 }
 
@@ -599,7 +617,7 @@ p {
 
 .ls-full-height {
 	position: relative;
-	height: 120vh;
+	height: 100vh;
 }
 
 .ls-no-padding {
