@@ -312,7 +312,7 @@ p {
 		display: block;
 		background-color: #000;
 		width: 2px;
-		height: 45px;
+		height: 31px;
 		position: absolute;
 		bottom: 15px;
 		left: 0;
@@ -421,7 +421,7 @@ p {
 		font-size: 32px;
 	}
 
-	.item-next, .item-prev {
+	.ls-item-next, .ls-item-prev {
 		color: #2ccb69;
 		cursor: pointer;
 	}
@@ -467,7 +467,7 @@ p {
 		font-size: 16px;
 		color: #e7e5e5;
 		border: none;
-		text-transform: lowercase;
+		text-transform: uppercase;
 		text-decoration: none;
 		position: relative;
 		margin: 5px;

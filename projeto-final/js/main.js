@@ -1,5 +1,5 @@
 var btnContact = document.querySelector(".ls-btn-contact");
-var toggleModal = document.querySelectorAll('.ls-toggle-modal');
+var toggleModal = document.querySelectorAll(".ls-toggle-modal");
 
 //Preloader
 window.addEventListener("load", () => {
@@ -18,27 +18,25 @@ btnContact.addEventListener("click", function () {
 });
 
 //Open and close modal and overlay
-for(i = 0; i < toggleModal.length; i++) {
-	toggleModal[i].addEventListener('click', () => {
-		var overlay = document.querySelector('.ls-overlay')
-		var budgetModal = document.querySelector('#ls-budget-modal');
+for (i = 0; i < toggleModal.length; i++) {
+	toggleModal[i].addEventListener("click", () => {
+		var overlay = document.querySelector(".ls-overlay");
+		var budgetModal = document.querySelector("#ls-budget-modal");
 
 		overlay.classList.toggle("ls-is-open");
 		budgetModal.classList.toggle("ls-is-open");
-	})
+	});
 }
 
 //Animation on scroll
-var myScrollDown = document.querySelector('.ls-scroll-down');
-var waypoint = new Waypoint(
-	{
-		element: myScrollDown,
-		handler: function() {
-			myScrollDown.classList.toggle('ls-fade-out');
-  		},
-		offset: '80%'
-	}
-);
+var myScrollDown = document.querySelector(".ls-scroll-down");
+var waypoint = new Waypoint({
+	element: myScrollDown,
+	handler: function () {
+		myScrollDown.classList.toggle("ls-fade-out");
+	},
+	offset: "80%",
+});
 
 // PORTFOLIO SLIDER
 
@@ -48,13 +46,44 @@ var sliderItem = document.querySelectorAll(".ls-slider-item");
 
 var containerWidth = sliderContainer.parentElement.offsetWidth;
 var sliderListWidth = containerWidth * sliderItem.length;
-console.log(sliderListWidth);
 
 sliderContainer.style.width = containerWidth + "px";
 
-for(let i = 0; i < sliderItem.length; i++) {
+for (let i = 0; i < sliderItem.length; i++) {
 	sliderItem[i].style.width = containerWidth + "px";
 }
 
 sliderList.style.width = sliderListWidth + "px";
 
+//Slider onClick animation
+
+var prevItem = document.querySelector(".ls-item-prev");
+var nextItem = document.querySelector(".ls-item-next");
+var indexList = sliderItem.length - 1;
+console.log(containerWidth * indexList);
+var pos = 0;
+
+nextItem.addEventListener("click", () => {
+	if (pos <= containerWidth * indexList * -1) {
+		return;
+	}
+
+	pos -= containerWidth;
+
+	anime({
+		targets: sliderList,
+		translateX: pos,
+	});
+});
+
+prevItem.addEventListener("click", () => {
+	if (pos >= 0) {
+		return;
+	}
+	pos += containerWidth;
+
+	anime({
+		targets: sliderList,
+		translateX: pos,
+	});
+});
