@@ -58,10 +58,31 @@ var prevSlideAnimation = () => {
 	});
 };
 
+//Grow item bar navigator
+var growItemNavigator = currentItemNavigator => {
+	anime({
+			targets: currentItemNavigator,
+			width: 90
+		});
+};
+
+// Shrink item bar navigator
+var shrinkItemNavigator = itemNavigatorToRemove => {
+	anime({
+		targets: itemNavigatorToRemove,
+		width: 20
+	});
+};
+
+//Set active nav
 var rechangeCurrentItemNavigator = () => {
-    var currentItemNavigator = document.querySelector(".ls-item-active");
-    currentItemNavigator.classList.remove("ls-item-active");
-    itemNavigator[findAtualIndex()].classList.add("ls-item-active");
+    var itemNavigatorToRemove = document.querySelector(".ls-item-active");
+	shrinkItemNavigator(itemNavigatorToRemove);
+	itemNavigatorToRemove.classList.remove("ls-item-active");
+
+	var currentItemNavigator = itemNavigator[findAtualIndex()];
+    currentItemNavigator.classList.add("ls-item-active");
+	growItemNavigator(currentItemNavigator);
 }
 
 //Counter formatter to two digits
@@ -86,6 +107,12 @@ var subtractCount = () => {
 //ACTIONS
 
 totalSlide.innerHTML = counterFormatter(sliderItem.length);
+
+
+anime({
+	targets: ".ls-item-active",
+	width: 90
+});
 
 nextItem.addEventListener("click", () => {
 	nextSlideAnimation();

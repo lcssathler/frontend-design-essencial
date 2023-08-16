@@ -385,7 +385,7 @@ p {
 	}
 
 	.ls-item-navigator a.ls-item-active {
-		width: 90px;
+		/* width: 90px; */
 		background-color: #2ccb69;
 	}
 
