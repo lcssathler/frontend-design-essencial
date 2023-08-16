@@ -10,6 +10,7 @@ var nextItem = document.querySelector(".ls-item-next");
 var indexList = sliderItem.length - 1;
 var pos = 0;
 var itemNavigator = document.querySelectorAll(".ls-item-navigator a");
+var counterNavigator = document.querySelector(".ls-navigator-counter span");
 
 var containerWidth = sliderContainer.parentElement.offsetWidth;
 var sliderListWidth = containerWidth * sliderItem.length;
@@ -104,10 +105,16 @@ var subtractCount = () => {
 	return counterFormatter(atualSlidePosition);
 };
 
+var rechangeCounterNavigator = () => {
+	let atualIndex = findAtualIndex() + 1;
+	counterNavigator.innerHTML = counterFormatter(atualIndex);
+}
+
 //ACTIONS
 
 totalSlide.innerHTML = counterFormatter(sliderItem.length);
 
+rechangeCounterNavigator();
 
 anime({
 	targets: ".ls-item-active",
@@ -118,10 +125,12 @@ nextItem.addEventListener("click", () => {
 	nextSlideAnimation();
 	currentSlide.innerHTML = addCount();
     rechangeCurrentItemNavigator();
+	rechangeCounterNavigator();
 });
 
 prevItem.addEventListener("click", () => {
 	prevSlideAnimation();
 	currentSlide.innerHTML = subtractCount();
     rechangeCurrentItemNavigator();
+	rechangeCounterNavigator();
 });
