@@ -43,6 +43,7 @@ var nextSlideAnimation = () => {
 	anime({
 		targets: sliderList,
 		translateX: pos,
+		easing: 'cubicBezier(0,1.01,.32,1)'
 	});
 };
 
@@ -56,14 +57,22 @@ var prevSlideAnimation = () => {
 	anime({
 		targets: sliderList,
 		translateX: pos,
+		easing: 'cubicBezier(0,1.01,.32,1)'
 	});
 };
+
+//Slide box animation
+var slideBoxAnimation = currentSlide => {
+	var currentSlideBox = currentSlide.querySelector(".ls-portfolio-item-box");
+	currentSlideBox.classList.add("ls-scale-right");
+}
 
 //Grow item bar navigator
 var growItemNavigator = currentItemNavigator => {
 	anime({
 			targets: currentItemNavigator,
-			width: 90
+			width: 90,
+			easing: 'cubicBezier(0,1.01,.32,1)'
 		});
 };
 
@@ -71,7 +80,8 @@ var growItemNavigator = currentItemNavigator => {
 var shrinkItemNavigator = itemNavigatorToRemove => {
 	anime({
 		targets: itemNavigatorToRemove,
-		width: 20
+		width: 20,
+		easing: 'cubicBezier(0,1.01,.32,1)'
 	});
 };
 
@@ -84,6 +94,19 @@ var rechangeCurrentItemNavigator = () => {
 	var currentItemNavigator = itemNavigator[findAtualIndex()];
     currentItemNavigator.classList.add("ls-item-active");
 	growItemNavigator(currentItemNavigator);
+}
+
+//Set active slide
+var rechangeCurrentSlide = () => {
+    var slideToRemove = document.querySelector(".ls-slide-active");
+	var slideAnimationToRemove = document.querySelector(".ls-scale-right");
+	
+	slideToRemove.classList.remove("ls-slide-active");
+	slideAnimationToRemove.classList.remove("ls-scale-right");
+
+	var currentSlide = sliderItem[findAtualIndex()];
+    currentSlide.classList.add("ls-slide-active");
+	slideBoxAnimation(currentSlide);
 }
 
 //Counter formatter to two digits
@@ -126,6 +149,7 @@ nextItem.addEventListener("click", () => {
 	currentSlide.innerHTML = addCount();
     rechangeCurrentItemNavigator();
 	rechangeCounterNavigator();
+	rechangeCurrentSlide();
 });
 
 prevItem.addEventListener("click", () => {
@@ -133,4 +157,5 @@ prevItem.addEventListener("click", () => {
 	currentSlide.innerHTML = subtractCount();
     rechangeCurrentItemNavigator();
 	rechangeCounterNavigator();
+	rechangeCurrentSlide();
 });
