@@ -29,8 +29,8 @@ sliderList.style.width = sliderListWidth + "px";
 
 //Atual index of the slider list
 var findAtualIndex = () => {
-    return -1 * (pos / containerWidth);
-}
+	return -1 * (pos / containerWidth);
+};
 
 //Next slider animation
 var nextSlideAnimation = () => {
@@ -43,7 +43,7 @@ var nextSlideAnimation = () => {
 	anime({
 		targets: sliderList,
 		translateX: pos,
-		easing: 'cubicBezier(0,1.01,.32,1)'
+		easing: "cubicBezier(0,1.01,.32,1)",
 	});
 };
 
@@ -57,57 +57,81 @@ var prevSlideAnimation = () => {
 	anime({
 		targets: sliderList,
 		translateX: pos,
-		easing: 'cubicBezier(0,1.01,.32,1)'
+		easing: "cubicBezier(0,1.01,.32,1)",
 	});
 };
 
+//Remove active
+var removeActive = () => {
+	var slideActiveToRemove = document.querySelector(".ls-slide-active");
+	var slideBoxAnimationToRemove = document.querySelector(".ls-scale-right");
+	var slideImgAnimationToRemove = document.querySelector(".ls-scale-up");
+	var slideInfoToRemove = document.querySelector(".ls-fade-from-left");
+
+	slideActiveToRemove.classList.remove("ls-slide-active");
+	slideBoxAnimationToRemove.classList.remove("ls-scale-right");
+	slideImgAnimationToRemove.classList.remove("ls-scale-up");
+	slideInfoToRemove.classList.remove("ls-fade-from-left");
+};
+
+//Slide info animation
+var portfolioItemInfoAnimations = (currentItemInfo) => {
+	currentItemInfo.classList.add("ls-fade-from-left");
+};
+
 //Slide box animation
-var slideBoxAnimation = currentSlide => {
-	var currentSlideBox = currentSlide.querySelector(".ls-portfolio-item-box");
-	currentSlideBox.classList.add("ls-scale-right");
-}
+var portfolioItemThumbAnimations = (currentItemThumb) => {
+	var currentItemBox = currentItemThumb.querySelector(
+		".ls-portfolio-item-box"
+	);
+	var currentItemImg = currentItemThumb.querySelector("img");
+
+	currentItemBox.classList.add("ls-scale-right");
+	currentItemImg.classList.add("ls-scale-up");
+};
 
 //Grow item bar navigator
-var growItemNavigator = currentItemNavigator => {
+var growItemNavigator = (currentItemNavigator) => {
 	anime({
-			targets: currentItemNavigator,
-			width: 90,
-			easing: 'cubicBezier(0,1.01,.32,1)'
-		});
+		targets: currentItemNavigator,
+		width: 90,
+		easing: "cubicBezier(0,1.01,.32,1)",
+	});
 };
 
 // Shrink item bar navigator
-var shrinkItemNavigator = itemNavigatorToRemove => {
+var shrinkItemNavigator = (itemNavigatorToRemove) => {
 	anime({
 		targets: itemNavigatorToRemove,
 		width: 20,
-		easing: 'cubicBezier(0,1.01,.32,1)'
+		easing: "cubicBezier(0,1.01,.32,1)",
 	});
 };
 
 //Set active nav
 var rechangeCurrentItemNavigator = () => {
-    var itemNavigatorToRemove = document.querySelector(".ls-item-active");
+	var itemNavigatorToRemove = document.querySelector(".ls-item-active");
 	shrinkItemNavigator(itemNavigatorToRemove);
 	itemNavigatorToRemove.classList.remove("ls-item-active");
 
 	var currentItemNavigator = itemNavigator[findAtualIndex()];
-    currentItemNavigator.classList.add("ls-item-active");
+	currentItemNavigator.classList.add("ls-item-active");
 	growItemNavigator(currentItemNavigator);
-}
+};
 
 //Set active slide
 var rechangeCurrentSlide = () => {
-    var slideToRemove = document.querySelector(".ls-slide-active");
-	var slideAnimationToRemove = document.querySelector(".ls-scale-right");
-	
-	slideToRemove.classList.remove("ls-slide-active");
-	slideAnimationToRemove.classList.remove("ls-scale-right");
+	removeActive();
 
 	var currentSlide = sliderItem[findAtualIndex()];
-    currentSlide.classList.add("ls-slide-active");
-	slideBoxAnimation(currentSlide);
-}
+	currentSlide.classList.add("ls-slide-active");
+
+	var currentItemThumb = currentSlide.querySelector(".ls-portfolio-item-thumb");
+	var currentItemInfo = currentSlide.querySelector(".ls-portfolio-item-info");
+
+	portfolioItemThumbAnimations(currentItemThumb);
+	portfolioItemInfoAnimations(currentItemInfo);
+};
 
 //Counter formatter to two digits
 var counterFormatter = (n) => {
@@ -131,7 +155,7 @@ var subtractCount = () => {
 var rechangeCounterNavigator = () => {
 	let atualIndex = findAtualIndex() + 1;
 	counterNavigator.innerHTML = counterFormatter(atualIndex);
-}
+};
 
 //ACTIONS
 
@@ -141,13 +165,13 @@ rechangeCounterNavigator();
 
 anime({
 	targets: ".ls-item-active",
-	width: 90
+	width: 90,
 });
 
 nextItem.addEventListener("click", () => {
 	nextSlideAnimation();
 	currentSlide.innerHTML = addCount();
-    rechangeCurrentItemNavigator();
+	rechangeCurrentItemNavigator();
 	rechangeCounterNavigator();
 	rechangeCurrentSlide();
 });
@@ -155,7 +179,7 @@ nextItem.addEventListener("click", () => {
 prevItem.addEventListener("click", () => {
 	prevSlideAnimation();
 	currentSlide.innerHTML = subtractCount();
-    rechangeCurrentItemNavigator();
+	rechangeCurrentItemNavigator();
 	rechangeCounterNavigator();
 	rechangeCurrentSlide();
 });

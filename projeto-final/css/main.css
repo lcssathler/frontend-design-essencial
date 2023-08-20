@@ -18,9 +18,22 @@
 	}
 }
 
+@keyframes fadeFromLeft {
+	to {
+		left: 0;
+		opacity: 1;
+	}
+}
+
 @keyframes scaleRight {
 	to {
 		transform: scaleX(1);
+	}
+}
+
+@keyframes scaleUp {
+	to {
+		transform: scale(1);
 	}
 }
 
@@ -251,7 +264,6 @@ p {
 		width: 100%;
 		position: relative;
 		left: 195px;
-
 	}
 
 	.ls-corner .ls-corner-icon {
@@ -261,15 +273,18 @@ p {
 	}
 
 	.ls-btn-contact {
-		width: 45px;
-		height: 45px;
+		width: 40px;
+		height: 40px;
 		display: block;
 		background-color: #2ccb69;
-		background-image: url("../images/icon-contact-close.svg");
+		background-image: url(../images/icon-contact-close.svg);
 		background-repeat: no-repeat;
+		/* background: center; */
+		background-position-x: -2px;
+		background-position-y: -1px;
 		position: fixed;
-		bottom: 30px;
-		right: 45px;
+		bottom: 36px;
+		right: 40px;
 		border: none;
 		border-radius: 50%;
 		z-index: 2;
@@ -426,7 +441,8 @@ p {
 		font-size: 32px;
 	}
 
-	.ls-item-next, .ls-item-prev {
+	.ls-item-next,
+	.ls-item-prev {
 		color: #2ccb69;
 		cursor: pointer;
 	}
@@ -454,6 +470,9 @@ p {
 		width: calc(100% - 40px);
 		display: table;
 		margin-top: 68px;
+		position: relative;
+		left: -75px;
+		opacity: 0;
 	}
 
 	.ls-portfolio-item-thumb {
@@ -483,7 +502,8 @@ p {
 		display: block;
 		position: relative;
 		left: -50px;
-
+		transform: scale(0);
+		transform-origin: center;
 	}
 }
 
@@ -667,7 +687,6 @@ p {
 
 .ls-title-size-45 {
 	font-size: 45px;
-
 }
 
 .ls-title-size-70 {
@@ -712,8 +731,16 @@ p {
 	animation: fadeOut 0.3s forwards linear;
 }
 
+.ls-fade-from-left {
+	animation: fadeFromLeft 0.3s 0.7s forwards ease-in-out;
+}
+
 .ls-scale-right {
-	animation: scaleRight 0.7s 0.2s forwards cubic-bezier(0,1.01,.32,1);
+	animation: scaleRight 0.7s 0.2s forwards cubic-bezier(0, 1.01, 0.32, 1);
+}
+
+.ls-scale-up {
+	animation: scaleUp 0.5 s 0.4s forwards cubic-bezier(0, 1.01, 0.32, 1);
 }
 
 .ls-slide-top-in {
