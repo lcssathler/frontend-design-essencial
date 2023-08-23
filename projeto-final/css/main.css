@@ -80,6 +80,7 @@ p {
 		position: fixed;
 		top: 0;
 		left: 0;
+		z-index: 1000;
 	}
 
 	.ls-logo {
@@ -281,7 +282,7 @@ p {
 		background-repeat: no-repeat;
 		/* background: center; */
 		background-position-x: -2px;
-		background-position-y: -1px;
+		background-position-y: -3px;
 		position: fixed;
 		bottom: 36px;
 		right: 40px;
@@ -478,7 +479,7 @@ p {
 	.ls-portfolio-item-thumb {
 		width: 100%;
 		display: table;
-		padding: 50px 0;
+		padding: 50px 0 13px 0;
 		margin-top: 20px;
 		position: relative;
 	}
@@ -504,6 +505,12 @@ p {
 		left: -50px;
 		transform: scale(0);
 		transform-origin: center;
+	}
+
+	.ls-portfolio-item-thumb > button {
+		margin-top: 12px;
+		margin-right: 50px;
+		float: right;
 	}
 }
 
@@ -576,10 +583,18 @@ p {
 	border: none;
 	transition: all 0.15s ease-out;
 	cursor: pointer;
+	position: relative;
+}
+
+.ls-btn ion-icon {
+	font-size: 20px;
+	vertical-align: middle;
+	margin-left: 3px;
 }
 
 .ls-btn-medium {
 	height: 38px;
+	line-height: 38px;
 	padding: 0 27px;
 	border-radius: 19px;
 	font-size: 14px;
@@ -587,6 +602,7 @@ p {
 
 .ls-btn-large {
 	height: 45px;
+	line-height: 45px;
 	padding: 0 32px;
 	border-radius: 23px;
 	font-size: 16px;
@@ -740,7 +756,7 @@ p {
 }
 
 .ls-scale-up {
-	animation: scaleUp 0.5 s 0.4s forwards cubic-bezier(0, 1.01, 0.32, 1);
+	animation: scaleUp 0.5s 0.4s forwards cubic-bezier(0, 1.01, 0.32, 1);
 }
 
 .ls-slide-top-in {
