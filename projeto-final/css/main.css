@@ -512,6 +512,11 @@ p {
 		margin-right: 50px;
 		float: right;
 	}
+
+
+	/* PORTFOLIO */
+
+	
 }
 
 @media screen and (min-width: 576px) {
@@ -661,6 +666,10 @@ p {
 
 .ls-mar-left-30 {
 	margin-left: 30px;
+}
+
+.ls-section-offset-top {
+	margin-top: 130px;
 }
 
 .ls-text-green {

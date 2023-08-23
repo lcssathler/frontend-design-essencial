@@ -1,11 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-</head>
-<body>
-    
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap" rel="stylesheet"/>
+		<link href="https://fonts.googleapis.com/css2?family=Trocchi&display=swap" rel="stylesheet"/>
+		<link rel="stylesheet" href="../css/bootstrap-grid.min.css" type="text/css"/>
+		<link rel="stylesheet" href="../css/main.css" type="text/css" />
+
+		<title>Portfolio</title>
+	</head>
+	<body>
+        <div class="ls-preloader-inner ls-text-light">
+			<img
+				src="../images/lemon-loader.svg"
+				alt="Lemon"
+				class="ls-mar-bottom-15"
+			/>
+			<p class="ls-mar-top-15">Squeezing some lemons... hold on!</p>
+		</div>
+
+		<div class="ls-overlay ls-toggle-modal ls-fade-in"></div>
+
+		<div class="ls-modal ls-bg-black ls-slide-top-in" id="ls-budget-modal">
+			<div class="ls-modal-header">
+				<h1 class="ls-title ls-text-green">Request for my services!</h1>
+				<div class="ls-modal-close ls-text-light ls-toggle-modal">
+					x
+				</div>
+			</div>
+
+			<div class="ls-modal-body ls-mar-top-15">
+				<p class="ls-text-light">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Architecto, asperiores.
+				</p>
+
+				<form class="ls-form ls-mar-top-15">
+					<div class="ls-form-row-medium">
+						<label for="Email" class="ls-text-light">Email</label>
+						<input
+							type="email"
+							name="Email"
+							id="ls-email"
+							class="ls-field ls-field-medium"
+						/>
+					</div>
+
+					<div class="ls-form-row-medium">
+						<label for="Name" class="ls-text-light">Name</label>
+						<input
+							type="text"
+							name="Name"
+							id="ls-name"
+							class="ls-field ls-field-medium"
+						/>
+					</div>
+
+					<div class="ls-form-row-medium">
+						<label for="Site" class="ls-text-light">Site</label>
+						<input
+							type="text"
+							name="Site"
+							id="ls-site"
+							class="ls-field ls-field-medium"
+						/>
+					</div>
+
+					<div class="ls-form-row-medium">
+						<label for="Phone" class="ls-text-light">Phone</label>
+						<input
+							type="tel"
+							name="Phone"
+							id="ls-phone"
+							class="ls-field ls-field-medium"
+						/>
+					</div>
+
+					<div class="ls-form-row-large">
+						<label for="Require" class="ls-text-light"
+							>What do you need for your project?</label
+						>
+						<input
+							type="text"
+							name="Require"
+							id="ls-require"
+							class="ls-field ls-field-large"
+						/>
+					</div>
+
+					<div class="ls-form-row-medium ls-require">
+						<button class="ls-btn ls-btn-large ls-btn-green">
+							Send budget
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<header class="ls-topbar">
+			<div class="ls-logo">
+				<img
+					src="../images/logo.svg"
+					alt="Lucas Sathler Desenvolvedor Logo"
+				/>
+			</div>
+
+			<nav class="ls-menu">
+				<a href="#">Home</a>
+				<a href="pages/portfolio.html">Portfolio</a>
+				<a href="#">About Me</a>
+			</nav>
+		</header>
+
+		<div class="ls-contact-info ls-bg-black ls-text-light">
+			<h2 class="ls-text-green ls-title">Contact me!</h2>
+			<p>lcssathler@gmail.com</p>
+			<p>+55 (31) 99362-0595</p>
+			<div class="ls-social-links">
+				<a href="#" class="ls-social">
+					<img src="../images/icon-instagram.svg" alt="Instagram" />
+				</a>
+
+				<a href="#" class="ls-social">
+					<img src="../images/icon-twitter.svg" alt="Twitter" />
+				</a>
+
+				<a href="#" class="ls-social">
+					<img src="../images/icon-dribbble.svg" alt="" />
+				</a>
+			</div>
+
+			<div class="ls-corner">
+				<img
+					src="../images/corner.svg"
+					alt="Corner"
+					class="ls-corner-icon"
+				/>
+			</div>
+		</div>
+
+		<button class="ls-btn-contact"></button>
+
+		<div class="ls-page-wrapper">
+            <section class="container-fluid ls-section-offset-top" id="ls-project-list-section">
+                <div class="row">
+                    <div class="col-sm-10 offset-sm-1 ls-bg-green">Hello, World!</div>
+                </div>
+            </section>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/inview.min.js"></script>
+		<script src="../js/anime.min.js"></script>	
+		<script src="../js/main.js"></script>
+    </body>
 </html>
