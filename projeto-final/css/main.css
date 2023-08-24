@@ -498,8 +498,7 @@ p {
 		position: relative;
 	}
 
-	.ls-slider-list .ls-portfolio-item-box,
-	.ls-portfolio-list .ls-portfolio-item-box {
+	.ls-slider-list .ls-portfolio-item-box {
 		width: 100%;
 		height: 100%;
 		display: block;
@@ -512,11 +511,16 @@ p {
 	}
 
 	.ls-portfolio-list .ls-portfolio-item-box {
-		transform: scale(1);
+		width: 100%;
+		height: 100%;
+		display: block;
+		background-color: #2c2c2c;
+		position: absolute;
+		top: 0;
+		left: 0;
 	}
 
-	.ls-slider-list .ls-portfolio-item-thumb img,
-	.ls-portfolio-list .ls-portfolio-item-thumb img {
+	.ls-slider-list .ls-portfolio-item-thumb img {
 		width: 100%;
 		max-width: 100%;
 		height: auto;
@@ -528,7 +532,12 @@ p {
 	}
 
 	.ls-portfolio-list .ls-portfolio-item-thumb img {
-		transform: scale(1);
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+		display: block;
+		position: relative;
+		left: -50px;
 	}
 
 	.ls-slider-list .ls-portfolio-item-thumb > button,

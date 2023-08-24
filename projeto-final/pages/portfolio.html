@@ -6,6 +6,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap" rel="stylesheet"/>
 		<link href="https://fonts.googleapis.com/css2?family=Trocchi&display=swap" rel="stylesheet"/>
 		<link rel="stylesheet" href="../css/bootstrap-grid.min.css" type="text/css"/>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<link rel="stylesheet" href="../css/main.css" type="text/css" />
 
 		<title>Portfolio</title>
@@ -22,15 +23,6 @@
 
 		<div class="ls-overlay ls-toggle-modal ls-fade-in"></div>
 
-		<div class="ls-modal ls-bg-black" id="ls-budget-modal">
-			<div class="ls-modal-header">
-				<h1 class="ls-title ls-text-green">Request for my services!</h1>
-				<div class="ls-modal-close ls-text-light ls-toggle-modal">
-					x
-				</div>
-			</div>
-		</div>
-
 		<header class="ls-topbar">
 			<div class="ls-logo">
 				<img
@@ -40,8 +32,8 @@
 			</div>
 
 			<nav class="ls-menu">
-				<a href="#">Home</a>
-				<a href="pages/portfolio.html">Portfolio</a>
+				<a href="../index.html">Home</a>
+				<a href="#">Portfolio</a>
 				<a href="#">About Me</a>
 			</nav>
 		</header>
@@ -84,7 +76,7 @@
                             <li class="ls-portfolio-item ls-slide-active"> 
                                 <div class="row">
                                     <div class="col-sm-5 ls-mar-left-15">
-                                        <div class="ls-portfolio-item-info">
+                                        <div class="ls-portfolio-item-info" data-aos="fade-right" data-aos-delay="200">
                                             <h1 class="ls-title ls-title-size-45 ls-text-light ls-mar-bottom-15">Startup Rocketz Website</h1>
                                             <p class="ls-text-light ls-mar-bottom-30">Lorem ipsum dolor sit amet consectetur, adipisicing.</p>
                                             <button class="ls-btn ls-btn-medium ls-btn-green">Visit project</button>
@@ -93,8 +85,8 @@
 
                                     <div class="col-sm-6">
                                         <div class="ls-portfolio-item-thumb">
-                                            <div class="ls-portfolio-item-box"></div>
-                                            <img src="../images/thumb-1.jpg" alt="Startup Rocketz">
+                                            <div class="ls-portfolio-item-box" data-aos="zoom-in"></div>
+                                            <img src="../images/thumb-1.jpg" data-aos="flip-left" data-aos-offset="300" data-aos-delay="300" alt="Startup Rocketz">
                                             <button class="ls-btn ls-btn-medium ls-btn-dark">Visit page <ion-icon name="arrow-forward-outline"></ion-icon></button>
                                         </div>
                                     </div>
@@ -104,7 +96,7 @@
                             <li class="ls-portfolio-item">
                                 <div class="row">
                                     <div class="col-sm-5 ls-mar-left-15">
-                                        <div class="ls-portfolio-item-info">
+                                        <div class="ls-portfolio-item-info" data-aos="fade-left" data-aos-delay="200">
                                             <h1 class="ls-title ls-title-size-45 ls-text-light ls-mar-bottom-15">Manage it! Mobile App</h1>
                                             <p class="ls-text-light ls-mar-bottom-30">Lorem ipsum dolor sit amet consectetur, adipisicing.</p>
                                             <button class="ls-btn ls-btn-medium ls-btn-green">Visit project</button>
@@ -113,8 +105,8 @@
 
                                     <div class="col-sm-6">
                                         <div class="ls-portfolio-item-thumb">
-                                            <div class="ls-portfolio-item-box"></div>
-                                            <img src="../images/thumb-2.jpg" alt="Mobile Application">
+                                            <div class="ls-portfolio-item-box" data-aos="zoom-in"></div>
+                                            <img src="../images/thumb-2.jpg" data-aos="flip-left" data-aos-offset="300" data-aos-delay="300" alt="Mobile Application">
                                             <button class="ls-btn ls-btn-medium ls-btn-dark">Visit page <ion-icon name="arrow-forward-outline"></ion-icon>
                                         </div>
                                     </div>
@@ -124,7 +116,7 @@
                             <li class="ls-portfolio-item">
                                 <div class="row">
                                     <div class="col-sm-5 ls-mar-left-15">
-                                        <div class="ls-portfolio-item-info">
+                                        <div class="ls-portfolio-item-info" data-aos="fade-right" data-aos-delay="200">
                                             <h1 class="ls-title ls-title-size-45 ls-text-light ls-mar-bottom-15">Vinyassa! Mobile Application</h1>
                                             <p class="ls-text-light ls-mar-bottom-30">Lorem ipsum dolor sit amet consectetur, adipisicing.</p>
                                             <button class="ls-btn ls-btn-medium ls-btn-green">Visit project</button>
@@ -133,8 +125,8 @@
 
                                     <div class="col-sm-6">
                                         <div class="ls-portfolio-item-thumb">
-                                            <div class="ls-portfolio-item-box"></div>
-                                            <img src="../images/thumb-3.jpg" alt="Vinyassa">
+                                            <div class="ls-portfolio-item-box" data-aos="zoom-in"></div>
+                                            <img src="../images/thumb-3.jpg" data-aos="flip-left" data-aos-offset="300" data-aos-delay="300" alt="Vinyassa">
                                             <button class="ls-btn ls-btn-medium ls-btn-dark">Visit page <ion-icon name="arrow-forward-outline"></ion-icon>
                                         </div>
                                     </div>
@@ -144,7 +136,7 @@
                             <li class="ls-portfolio-item">
                                 <div class="row">
                                     <div class="col-sm-5 ls-mar-left-15">
-                                        <div class="ls-portfolio-item-info">
+                                        <div class="ls-portfolio-item-info" data-aos="fade-left" data-aos-delay="200">
                                             <h1 class="ls-title ls-title-size-45 ls-text-light ls-mar-bottom-15">Website for Agency</h1>
                                             <p class="ls-text-light ls-mar-bottom-30">Lorem ipsum dolor sit amet consectetur, adipisicing.</p>
                                             <button class="ls-btn ls-btn-medium ls-btn-green">Visit project</button>
@@ -153,8 +145,8 @@
 
                                     <div class="col-sm-6">
                                         <div class="ls-portfolio-item-thumb">
-                                            <div class="ls-portfolio-item-box"></div>
-                                            <img src="../images/thumb-4.jpg" alt="Website for Agency">
+                                            <div class="ls-portfolio-item-box" data-aos="zoom-in"></div>
+                                            <img src="../images/thumb-4.jpg" data-aos="flip-left" data-aos-offset="300" data-aos-delay="300" alt="Website for Agency">
                                             <button class="ls-btn ls-btn-medium ls-btn-dark">Visit page <ion-icon name="arrow-forward-outline"></ion-icon>
                                         </div>
                                     </div>
@@ -164,7 +156,7 @@
                             <li class="ls-portfolio-item">
                                 <div class="row">
                                     <div class="col-sm-5 ls-mar-left-15">
-                                        <div class="ls-portfolio-item-info">
+                                        <div class="ls-portfolio-item-info" data-aos="fade-right" data-aos-delay="200">
                                             <h1 class="ls-title ls-title-size-45 ls-text-light ls-mar-bottom-15">Total control. Web Application</h1>
                                             <p class="ls-text-light ls-mar-bottom-30">Lorem ipsum dolor sit amet consectetur, adipisicing.</p>
                                             <button class="ls-btn ls-btn-medium ls-btn-green">Visit project</button>
@@ -173,8 +165,8 @@
 
                                     <div class="col-sm-6">
                                         <div class="ls-portfolio-item-thumb">
-                                            <div class="ls-portfolio-item-box"></div>
-                                            <img src="../images/thumb-5.jpg" alt="Web application">
+                                            <div class="ls-portfolio-item-box" data-aos="zoom-in"></div>
+                                            <img src="../images/thumb-5.jpg" data-aos="flip-left" data-aos-offset="300" data-aos-delay="300" alt="Web application">
                                             <button class="ls-btn ls-btn-medium ls-btn-dark">Visit page <ion-icon name="arrow-forward-outline"></ion-icon>
                                         </div>
                                     </div>
@@ -185,10 +177,12 @@
                 </div>
             </section>
         </div>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/inview.min.js"></script>
-		<script src="../js/anime.min.js"></script>	
+		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<script src="../js/main.js"></script>
+
+		<script>
+  			AOS.init();
+		</script>
     </body>
 </html>
