@@ -2,7 +2,7 @@
 
 var sliderContainer = document.querySelector(".ls-slider-container");
 var sliderList = document.querySelector(".ls-slider-list");
-var sliderItem = document.querySelectorAll(".ls-slider-item");
+var sliderItem = document.querySelectorAll(".ls-portfolio-item");
 var currentSlide = document.querySelector(".ls-current-slide");
 var totalSlide = document.querySelector(".ls-total-slide");
 var prevItem = document.querySelector(".ls-item-prev");

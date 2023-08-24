@@ -464,11 +464,15 @@ p {
 		list-style: none;
 	}
 
-	.ls-slider-list .ls-slider-item {
+	.ls-slider-list .ls-portfolio-item {
 		display: block;
 		height: 500px;
 		float: left;
 		margin-top: calc(30vh - 75px);
+	}
+
+	.ls-portfolio-list .ls-portfolio-item {
+		margin-bottom: 100px;
 	}
 
 	.ls-slider-list .ls-portfolio-item-info {
@@ -478,6 +482,11 @@ p {
 		position: relative;
 		left: -75px;
 		opacity: 0;
+	}
+
+	.ls-portfolio-list .ls-portfolio-item-info {
+		width: calc(100% - 75px);
+		margin: 60px 20px 0 0;
 	}
 
 	.ls-slider-list .ls-portfolio-item-thumb,
@@ -531,8 +540,13 @@ p {
 
 
 	/* PORTFOLIO */
-
+	.ls-portfolio-list .ls-portfolio-item:nth-child(odd) .ls-portfolio-item-info {
+		text-align: right;
+	}
 	
+	.ls-portfolio-list .ls-portfolio-item:nth-child(odd) .ls-portfolio-item-info button {
+		float: right;
+	}
 }
 
 @media screen and (min-width: 576px) {
