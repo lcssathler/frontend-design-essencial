@@ -548,11 +548,16 @@ p {
 	}
 
 	/* PORTFOLIO */
-	.ls-portfolio-list .ls-portfolio-item:nth-child(odd) .ls-portfolio-item-info {
+	.ls-portfolio-list
+		.ls-portfolio-item:nth-child(odd)
+		.ls-portfolio-item-info {
 		text-align: right;
 	}
 
-	.ls-portfolio-list .ls-portfolio-item:nth-child(odd) .ls-portfolio-item-info button {
+	.ls-portfolio-list
+		.ls-portfolio-item:nth-child(odd)
+		.ls-portfolio-item-info
+		button {
 		float: right;
 	}
 
@@ -560,19 +565,59 @@ p {
 		flex-direction: row-reverse;
 	}
 
-	.ls-portfolio-list .ls-portfolio-item:nth-child(even) .ls-portfolio-item-thumb img {
+	.ls-portfolio-list
+		.ls-portfolio-item:nth-child(even)
+		.ls-portfolio-item-thumb
+		img {
 		left: 50px;
 	}
 
-	.ls-portfolio-list .ls-portfolio-item:nth-child(even) .ls-portfolio-item-thumb button {
+	.ls-portfolio-list
+		.ls-portfolio-item:nth-child(even)
+		.ls-portfolio-item-thumb
+		button {
 		margin-left: 50px;
 		float: left;
 	}
 
-	.ls-portfolio-list .ls-portfolio-item:nth-child(even) .ls-portfolio-item-info {
+	.ls-portfolio-list
+		.ls-portfolio-item:nth-child(even)
+		.ls-portfolio-item-info {
 		margin-left: 75px;
 	}
 
+	/* ABOUT ME */
+
+	#ls-avatar-about-me img {
+		position: relative;
+		left: -15px;
+	}
+
+	.ls-box-img {
+		width: 100%;
+		display: table;
+	}
+
+	.ls-page-list li::before {
+		content: "";
+		background-color: #2ccb69;
+		width: 8px;
+		height: 8px;
+		display: block;
+		border-radius: 50%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin: 7px 0;
+	}
+
+	.ls-page-list li {
+		font-size: 14px;
+		line-height: 22px;
+		margin: 7px 0;
+		padding-left: 20px;
+		position: relative;
+	}
 }
 
 @media screen and (min-width: 576px) {
@@ -798,6 +843,19 @@ p {
 .ls-no-radius-right {
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
+}
+
+.ls-img-responsive {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+.ls-page-list {
+	list-style: none;
+	font-family: "Open Sans", sans-serif;
+	margin-left: 2px;
 }
 
 /* STATE CLASSES*/
