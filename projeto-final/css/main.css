@@ -655,8 +655,11 @@ p {
 	}
 
 	.ls-hero h1 {
-		font-size: 48px;
 		margin-bottom: 50px;
+	}
+
+	.ls-hero p:not(.ls-hero p:last-child) {
+		margin-bottom: 15px;
 	}
 
 	.ls-hero-inner {
@@ -667,8 +670,6 @@ p {
 		position: relative;
 		z-index: 1; /* Stacking content */
 	}
-
-
 
 	.ls-hero-inner-content:before {
 		content: "";
@@ -689,6 +690,16 @@ p {
 		height: 100%;
 		display: table;
 		border-right: 1px solid #2ccb69;
+	}
+
+	.ls-post p{
+		margin-bottom: 30px;
+	}
+
+	.ls-post-section {
+		display: table;
+		width: 100%;
+		padding: 45px 0;
 	}
 }
 
@@ -896,6 +907,10 @@ p {
 	font-size: 70px;
 	white-space: nowrap;
 	width: auto;
+}
+
+.ls-text-center {
+	text-align: center;
 }
 
 .ls-full-height {
