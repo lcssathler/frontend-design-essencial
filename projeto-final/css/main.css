@@ -650,9 +650,34 @@ p {
 		height: 500px;
 		background-image: url("../pages/portfolio/img/hero.png");
 		background-repeat: no-repeat;
-		background-position: center center;
+		background-position: center;
 		background-size: cover;
 
+	}
+
+	.ls-hero-inner {
+		height: 500px;
+	}
+
+	.ls-hero-inner-content {
+		position: relative;
+	}
+
+	.ls-hero-inner-content > .row {
+		position: relative;
+	}
+
+	.ls-hero-inner-content:before {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.85);
+		position: absolute;
+		top: -65px;
+		left: -65px;
+		box-sizing: content-box;
+		padding: 65px;
 	}
 }
 
