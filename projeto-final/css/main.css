@@ -652,7 +652,11 @@ p {
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
+	}
 
+	.ls-hero h1 {
+		font-size: 48px;
+		margin-bottom: 50px;
 	}
 
 	.ls-hero-inner {
@@ -661,11 +665,10 @@ p {
 
 	.ls-hero-inner-content {
 		position: relative;
+		z-index: 1; /* Stacking content */
 	}
 
-	.ls-hero-inner-content > .row {
-		position: relative;
-	}
+
 
 	.ls-hero-inner-content:before {
 		content: "";
@@ -678,6 +681,14 @@ p {
 		left: -65px;
 		box-sizing: content-box;
 		padding: 65px;
+		z-index: -1; /* Stacking content */
+	}
+
+	.ls-project-stats {
+		width: 90%;
+		height: 100%;
+		display: table;
+		border-right: 1px solid #2ccb69;
 	}
 }
 
