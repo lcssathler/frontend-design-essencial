@@ -686,7 +686,7 @@ p {
 	}
 
 	.ls-project-stats {
-		width: 90%;
+		width: 95%;
 		height: 100%;
 		display: table;
 		border-right: 1px solid #2ccb69;
@@ -705,6 +705,15 @@ p {
 		display: table;
 		width: 100%;
 		padding: 45px 0;
+	}
+
+	.ls-pre-gallery {
+		padding-bottom: 300px;
+	}
+
+	.ls-post-gallery > .container {
+		position: relative;
+		top: -270px;
 	}
 }
 
@@ -855,14 +864,6 @@ p {
 
 .ls-mar-left-30 {
 	margin-left: 30px;
-}
-
-.ls-pad-right-100 {
-	padding-right: 100px;
-}
-
-.ls-pad-left-100 {
-	padding-left: 100px;
 }
 
 .ls-section-offset-top {
