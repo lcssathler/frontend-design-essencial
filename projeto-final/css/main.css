@@ -692,6 +692,11 @@ p {
 		border-right: 1px solid #2ccb69;
 	}
 
+	.ls-post {
+		width: 100%;
+		display: table;
+	}
+
 	.ls-post p{
 		margin-bottom: 15px;
 	}
@@ -850,6 +855,14 @@ p {
 
 .ls-mar-left-30 {
 	margin-left: 30px;
+}
+
+.ls-pad-right-100 {
+	padding-right: 100px;
+}
+
+.ls-pad-left-100 {
+	padding-left: 100px;
 }
 
 .ls-section-offset-top {
