@@ -28,6 +28,13 @@ for (i = 0; i < toggleModal.length; i++) {
 	});
 }
 
+//Manage it - excluiding blank space over gallery
+var postGallery = document.querySelector(".ls-post-gallery");
+var postGalleryHeight = postGallery.clientHeight;
+postGallery.style.display = "block";
+postGallery.style.height = (postGalleryHeight - 270) + "px";
+
+
 //Animation on scroll
 var myScrollDown = document.querySelector(".ls-scroll-down");
 var waypoint = new Waypoint({
