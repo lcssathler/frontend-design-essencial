@@ -127,8 +127,8 @@ p {
 		height: 100vh;
 		display: none;
 		position: fixed;
-		background-color: rgba(22, 22, 22, 0.938);
-		z-index: 3;
+		background-color: #006627fd;
+		z-index: 2000;
 		opacity: 0;
 	}
 
@@ -708,6 +708,7 @@ p {
 	}
 
 	.ls-pre-gallery {
+		display: block;
 		padding-bottom: 300px;
 	}
 
@@ -715,6 +716,24 @@ p {
 		position: relative;
 		top: -270px;
 	}
+
+	.ls-gallery-frame-container {
+		display: table;
+		position: fixed;
+		top: 50px;
+		right: 0;
+		left: 0;
+		margin: 0 auto;
+		z-index: 3000;
+	}
+
+	.ls-gallery-frame-img {
+		display: none;
+		width: 100%;
+		max-width: 100%;
+		height: calc(100vh - 150px);
+	}
+
 }
 
 @media screen and (min-width: 576px) {

@@ -31,8 +31,11 @@ for (i = 0; i < toggleModal.length; i++) {
 //Manage it - excluiding blank space over gallery
 var postGallery = document.querySelector(".ls-post-gallery");
 var postGalleryHeight = postGallery.clientHeight;
+console.log(postGalleryHeight);
 postGallery.style.height = (postGalleryHeight - 270) + "px";
+postGallery.style.minHeight = (postGalleryHeight - 270).toString() + "px";
 postGallery.style.display = "block"; 
+console.log(postGallery.style.height);
 
 
 //Animation on scroll
@@ -42,6 +45,6 @@ var waypoint = new Waypoint({
 	handler: function () {
 		myScrollDown.classList.toggle("ls-fade-out");
 	},
-	offset: "80%",
+	offset: "80%"
 });
 

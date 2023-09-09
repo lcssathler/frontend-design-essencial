@@ -36,6 +36,11 @@
 
 		<div class="ls-overlay ls-toggle-modal ls-fade-in"></div>
 
+		<div class="ls-gallery-frame-container">
+			<img src="img/frame-smartphone.png" class="ls-gallery-frame-img">
+			<img src="">
+		</div>
+
 		<header class="ls-topbar">
 			<div class="ls-logo">
 				<img
@@ -265,27 +270,16 @@
 			</main>
 		</div>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/inview.min.js"></script>
 		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/inview.min.js"></script>
 		<script src="../../js/main.js"></script>
+		<script src="js/manage-it.js"></script>
 
 		<script>
-			AOS.init();
-			var rellax = new Rellax(".rellax");
 
-			var galleryItems = document.querySelectorAll('.ls-post-gallery img')
-			for (var i = 0; i < galleryItems.length; i++) {
-				new Waypoint.Inview({
-					element: galleryItems[i],
-					entered: function() {
-						let fullImg = this.element.getAttribute("data-src");
-						this.element.setAttribute("src", fullImg)
-					}
-				})
-			}
 		</script>
 	</body>
 </html>
