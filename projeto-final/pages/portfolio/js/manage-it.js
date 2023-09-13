@@ -1,13 +1,15 @@
-var galleryItems = document.querySelectorAll(".ls-post-gallery img");
+var galleryImages = document.querySelectorAll(".ls-thumb-img");
 var overlay = document.querySelector(".ls-overlay");
-var galleryFrameImg = document.querySelector(".ls-gallery-frame-img");
+var galleryFrameContainer
+var galleryFrameInner = document.querySelector(".ls-gallery-frame-inner");
+var frameImg = document.querySelector(".ls-gallery-frame-img");
 
 AOS.init();
 var rellax = new Rellax(".rellax");
 
-for (var i = 0; i < galleryItems.length; i++) {
+for (const element of galleryImages) {
 	new Waypoint.Inview({
-		element: galleryItems[i],
+		element: element,
 		entered: function () {
 			let fullImg = this.element.getAttribute("data-src");
 			this.element.setAttribute("src", fullImg);
@@ -15,14 +17,16 @@ for (var i = 0; i < galleryItems.length; i++) {
 	});
 }
 
-var openOverlay = () => {
-	overlay.style.display = "block";
-    galleryFrameImg.style.display = "block";
+var openOverlay = (galleryItem) => {
+	overlay.classList.add("ls-is-open")
+    galleryFrameInner.classList.add("ls-is-open");
+
+	let galleryItemSrc = galleryItem.getAttribute("src");
+	frameImg.setAttribute("src", galleryItemSrc);
 };
 
-for (let i = 0; i < galleryItems.length; i++) {
-	galleryItems[i].addEventListener("click", () => {
-		console.log(galleryItems[i]);
-		openOverlay();
+for (const item of galleryImages) {
+	item.addEventListener("click", () => {
+		openOverlay(item);
 	});
 }
