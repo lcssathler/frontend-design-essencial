@@ -3,6 +3,7 @@ var overlay = document.querySelector(".ls-overlay");
 var galleryFrameContainer
 var galleryFrameInner = document.querySelector(".ls-gallery-frame-inner");
 var frameImg = document.querySelector(".ls-gallery-frame-img");
+var toggleGallery = document.querySelectorAll(".ls-toggle-gallery");
 
 AOS.init();
 var rellax = new Rellax(".rellax");
@@ -25,8 +26,19 @@ var openOverlay = (galleryItem) => {
 	frameImg.setAttribute("src", galleryItemSrc);
 };
 
+var closeOverlay = () => {
+	overlay.classList.remove("ls-is-open");
+    galleryFrameInner.classList.remove("ls-is-open");
+}
+
 for (const item of galleryImages) {
 	item.addEventListener("click", () => {
 		openOverlay(item);
 	});
+}
+
+for (let item of toggleGallery) {
+	item.addEventListener("click", () => {
+		closeOverlay();
+	})
 }

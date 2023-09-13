@@ -141,7 +141,7 @@ p {
 		left: 0;
 		margin: 0 auto;
 		padding: 30px;
-		z-index: 3;
+		z-index: 3000;
 	}
 
 	.ls-modal .ls-modal-header {
@@ -717,6 +717,10 @@ p {
 		top: -270px;
 	}
 
+	.ls-post-gallery .ls-thumb-img {
+		cursor: pointer;
+	}
+
 	.ls-gallery-frame-container {
 		display: table;
 		position: fixed;
@@ -742,6 +746,27 @@ p {
 		top: 0;
 		left: 0;
 		z-index: 4000;
+		border: none;
+	}
+
+	.ls-close-gallery {
+		width: 44px;
+		height: 44px;
+		background-color: #000;
+		text-align: center;
+		line-height: 2px;
+		position: absolute;
+		top: -30px;
+		right: -40px;
+		border-radius: 50%;
+		border: none;
+		cursor: pointer;
+	}
+
+	.ls-close-gallery ion-icon {
+		height: 20px;
+		width: 20px;
+		color: #2ccb69;
 	}
 
 	.ls-gallery-frame-img {
@@ -858,7 +883,6 @@ p {
 }
 
 .ls-btn-green:hover {
-	background-color: #068a39;
 	color: #f5f5f5e8;
 	transform: scale(1.1);
 }
