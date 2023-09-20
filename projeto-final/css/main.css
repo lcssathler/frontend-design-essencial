@@ -748,7 +748,7 @@ p {
 		background-color: #fff;
 		width: 87%;	
 		height: 95%;
-		display: flex;		
+		display: none;		
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
@@ -1095,7 +1095,7 @@ p {
 }
 
 .ls-fade-out {
-	animation: fadeOut 0.3s forwards linear;
+	animation: fadeOut 1s forwards linear;
 }
 
 .ls-fade-from-left {
