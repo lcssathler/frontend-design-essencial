@@ -1,5 +1,6 @@
 var btnContact = document.querySelector(".ls-btn-contact");
 var toggleModal = document.querySelectorAll(".ls-toggle-modal");
+var postGallery = document.querySelector(".ls-post-gallery");
 
 //Preloader
 window.addEventListener("load", () => {
@@ -29,14 +30,11 @@ for (i = 0; i < toggleModal.length; i++) {
 }
 
 //Manage it - excluiding blank space over gallery
-var postGallery = document.querySelector(".ls-post-gallery");
+
 var postGalleryHeight = postGallery.clientHeight;
-console.log(postGalleryHeight);
 postGallery.style.height = (postGalleryHeight - 270) + "px";
 postGallery.style.minHeight = (postGalleryHeight - 270).toString() + "px";
 postGallery.style.display = "block"; 
-console.log(postGallery.style.height);
-
 
 //Animation on scroll
 var myScrollDown = document.querySelector(".ls-scroll-down");
@@ -47,4 +45,3 @@ var waypoint = new Waypoint({
 	},
 	offset: "80%"
 });
-

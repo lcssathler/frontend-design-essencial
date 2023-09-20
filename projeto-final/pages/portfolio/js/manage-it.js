@@ -8,8 +8,11 @@ var currentGalleryImage = null;
 var prevBtn = document.querySelector(".ls-item-prev");
 var nextBtn = document.querySelector(".ls-item-next");
 
-var currentImage = document.querySelector(".ls-current-image");
-var totalImage = document.querySelector(".ls-total-image");
+var currentCounter = document.querySelector(".ls-current-image");
+var totalCounter = document.querySelector(".ls-total-image");
+
+totalCounter.innerHTML = galleryImages.length;
+
 
 AOS.init();
 var rellax = new Rellax(".rellax");
@@ -27,6 +30,15 @@ for (const element of galleryImages) {
 
 //HANDLERS
 
+var counterFormatter = (n) => {
+	n++;
+	if (n < 10) {
+		return "0" + n;
+	} else {
+		return n;
+	}
+}; 
+
 var openOverlay = () => {
 	overlay.classList.add("ls-is-open")
     galleryFrameInner.classList.add("ls-is-open");
@@ -42,14 +54,6 @@ var setImage = item => {
 	frameImg.setAttribute("src", galleryItemSrc);
 }
 
-var counterFormatter = (n) => {
-	n++;
-	if (n < 10) {
-		return "0" + n;
-	} else {
-		return n;
-	}
-};
 
 for (let i = 0; i < galleryImages.length; i++) {
 	let item = galleryImages[i];
@@ -57,7 +61,7 @@ for (let i = 0; i < galleryImages.length; i++) {
 		openOverlay();
 		currentGalleryImage = item;
 		setImage(currentGalleryImage);
-		currentImage.innerHTML = counterFormatter(i);
+		currentCounter.innerHTML = counterFormatter(i);
 	});
 }
 
@@ -65,10 +69,10 @@ prevBtn.addEventListener("click", () => {
 	var index = parseInt(currentGalleryImage.getAttribute("data-index"));
 	if (index >= 1) {
 		currentGalleryImage = galleryImages[index - 1];	
-		currentImage.innerHTML = counterFormatter(index - 1);
+		currentCounter.innerHTML = counterFormatter(index - 1);
 	} else {
 		currentGalleryImage = galleryImages[0];
-		currentImage.innerHTML = counterFormatter(index);
+		currentCounter.innerHTML = counterFormatter(index);
 	}
 	setImage(currentGalleryImage);
 })
@@ -77,10 +81,10 @@ nextBtn.addEventListener("click", () => {
 	var index = parseInt(currentGalleryImage.getAttribute("data-index"));
 	if (index < 11) {
 		currentGalleryImage = galleryImages[index + 1];	
-		currentImage.innerHTML = counterFormatter(index + 1);
+		currentCounter.innerHTML = counterFormatter(index + 1);
 	} else {
 		currentGalleryImage = galleryImages[11];
-		currentImage.innerHTML = counterFormatter(index);
+		currentCounter.innerHTML = counterFormatter(index);
 	}
 	setImage(currentGalleryImage);
 })
