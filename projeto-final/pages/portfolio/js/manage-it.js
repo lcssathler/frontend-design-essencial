@@ -28,6 +28,7 @@ for (const element of galleryImages) {
 
 //HANDLERS
 
+//Counter formatter
 var counterFormatter = (n) => {
   n++;
   if (n < 10) {
@@ -37,21 +38,25 @@ var counterFormatter = (n) => {
   }
 };
 
+//Open overlay
 var openOverlay = () => {
   overlay.classList.add("ls-is-open");
   galleryFrameInner.classList.add("ls-is-open");
 };
 
+//Close overlay
 var closeOverlay = () => {
   overlay.classList.remove("ls-is-open");
   galleryFrameInner.classList.remove("ls-is-open");
 };
 
+//Set gallery image
 var setImage = (item) => {
   let galleryItemSrc = item.getAttribute("src");
   frameImg.setAttribute("src", galleryItemSrc);
 };
 
+//Close skeleton
 var closeSkeleton = (galleryImage) => {
   var myImage = new Image();
   myImage.src = galleryImage.getAttribute("src");
