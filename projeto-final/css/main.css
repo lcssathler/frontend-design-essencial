@@ -238,7 +238,7 @@ p {
 		position: fixed;
 		top: 0;
 		right: 0;
-		padding: 80px 0 0 20px;
+		padding: 100px 0 0 20px;
 		z-index: 3000;
 	}
 
@@ -250,6 +250,26 @@ p {
 		height: 60px;
 		line-height: 60px;
 		text-decoration: none;
+	}
+
+	.ls-btn-menu-mobile {
+		background-color: #2ccb69;
+		display: block;
+		width: 54px;
+		height: 54px;
+		line-height: 52px;
+		text-align: center;
+		position: fixed;
+		top: 30px;
+		right: 30px;
+		border-radius: 50%;
+		border: none;
+		z-index: 3000;
+		cursor: pointer;
+	}
+
+	.ls-btn-menu-mobile ion-icon {
+		vertical-align: middle;
 	}
 
 	.ls-box-info {
