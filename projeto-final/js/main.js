@@ -11,6 +11,14 @@ window.addEventListener("load", () => {
 	}, 2000);
 });
 
+//Manage it - excluiding blank space under gallery
+
+var postGalleryHeight = postGallery.clientHeight;
+postGallery.style.height = (postGalleryHeight - 270) + "px";
+postGallery.style.minHeight = (postGalleryHeight - 270).toString() + "px";
+postGallery.style.display = "block"; 
+
+
 //Show box contact
 btnContact.addEventListener("click", function () {
 	var boxInfo = document.querySelector(".ls-contact-info");
@@ -29,12 +37,6 @@ for (i = 0; i < toggleModal.length; i++) {
 	});
 }
 
-//Manage it - excluiding blank space over gallery
-
-var postGalleryHeight = postGallery.clientHeight;
-postGallery.style.height = (postGalleryHeight - 270) + "px";
-postGallery.style.minHeight = (postGalleryHeight - 270).toString() + "px";
-postGallery.style.display = "block"; 
 
 //Animation on scroll
 var myScrollDown = document.querySelector(".ls-scroll-down");
