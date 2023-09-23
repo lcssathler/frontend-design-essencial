@@ -1,6 +1,6 @@
 var btnContact = document.querySelector(".ls-btn-contact");
 var toggleModal = document.querySelectorAll(".ls-toggle-modal");
-var postGallery = document.querySelector(".ls-post-gallery");
+
 
 //Preloader
 window.addEventListener("load", () => {
@@ -11,12 +11,7 @@ window.addEventListener("load", () => {
 	}, 2000);
 });
 
-//Manage it - excluiding blank space under gallery
 
-var postGalleryHeight = postGallery.clientHeight;
-postGallery.style.height = (postGalleryHeight - 270) + "px";
-postGallery.style.minHeight = (postGalleryHeight - 270).toString() + "px";
-postGallery.style.display = "block"; 
 
 
 //Show box contact

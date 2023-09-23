@@ -913,6 +913,10 @@ p {
 		margin: 5px;
 	}
 
+	.ls-btn-menu-mobile {
+		display: none;
+	}
+
 	.ls-menu a:first-child {
 		margin-left: 0;
 	}

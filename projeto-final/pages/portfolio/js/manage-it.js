@@ -1,3 +1,5 @@
+var postGallery = document.querySelector(".ls-post-gallery");
+console.log(postGallery.clientHeight);
 var galleryImages = document.querySelectorAll(".ls-thumb-img");
 var overlay = document.querySelector(".ls-overlay");
 var galleryFrameContainer;
@@ -10,6 +12,14 @@ var nextBtn = document.querySelector(".ls-item-next");
 var currentCounter = document.querySelector(".ls-current-image");
 var totalCounter = document.querySelector(".ls-total-image");
 var skeletonLoading = document.querySelector(".ls-skeleton-loading");
+
+//Manage it - excluding blank space under gallery
+
+var postGalleryHeight = postGallery.clientHeight;
+postGallery.style.height = (postGalleryHeight - 270) + "px";
+postGallery.style.minHeight = (postGalleryHeight - 270).toString() + "px";
+postGallery.style.display = "block";
+console.log(postGallery.clientHeight);
 
 totalCounter.innerHTML = galleryImages.length;
 
