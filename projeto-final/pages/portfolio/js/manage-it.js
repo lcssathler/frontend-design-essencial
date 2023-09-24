@@ -13,16 +13,19 @@ var currentCounter = document.querySelector(".ls-current-image");
 var totalCounter = document.querySelector(".ls-total-image");
 var skeletonLoading = document.querySelector(".ls-skeleton-loading");
 
-//Manage it - excluding blank space under gallery
-
-var postGalleryHeight = postGallery.clientHeight;
-postGallery.style.height = (postGalleryHeight - 270) + "px";
-postGallery.style.minHeight = (postGalleryHeight - 270).toString() + "px";
-postGallery.style.display = "block";
-console.log(postGallery.clientHeight);
-
 totalCounter.innerHTML = galleryImages.length;
 
+//Manage it - excluding blank space under gallery
+var postGalleryHeight = postGallery.clientHeight;
+if (postGalleryHeight > 1296) {
+  postGallery.style.height = (postGalleryHeight - 270) + "px";
+  postGallery.style.minHeight = (postGalleryHeight - 270).toString() + "px";
+} else {
+  postGallery.style.maxHeight = 1296 + "px";
+}
+
+
+//Parallel
 AOS.init();
 var rellax = new Rellax(".rellax");
 

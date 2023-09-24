@@ -761,6 +761,11 @@ p {
 		padding-bottom: 300px;
 	}
 
+	.ls-post-gallery {
+		display: block;
+		max-height: 1296px;
+	}
+
 	.ls-post-gallery > .container {
 		position: relative;
 		top: -270px;

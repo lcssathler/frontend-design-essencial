@@ -8,11 +8,8 @@ window.addEventListener("load", () => {
 	pagePreloader.classList.add("ls-fade-out");
 	setTimeout(() => {
 		pagePreloader.style.display = "none";
-	}, 2000);
+	}, 1000);
 });
-
-
-
 
 //Show box contact
 btnContact.addEventListener("click", function () {
@@ -22,7 +19,7 @@ btnContact.addEventListener("click", function () {
 });
 
 //Open and close modal and overlay
-for (i = 0; i < toggleModal.length; i++) {
+for (let i = 0; i < toggleModal.length; i++) {
 	toggleModal[i].addEventListener("click", () => {
 		var overlay = document.querySelector(".ls-overlay");
 		var budgetModal = document.querySelector("#ls-budget-modal");
@@ -31,7 +28,6 @@ for (i = 0; i < toggleModal.length; i++) {
 		budgetModal.classList.toggle("ls-is-open");
 	});
 }
-
 
 //Animation on scroll
 var myScrollDown = document.querySelector(".ls-scroll-down");
