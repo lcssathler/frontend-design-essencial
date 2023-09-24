@@ -239,6 +239,7 @@ p {
 		top: 0;
 		padding: 100px 0 0 20px;
 		z-index: 3000;
+		transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 	}
 
 	.ls-menu-mobile-is-closed {
@@ -909,7 +910,7 @@ p {
 		padding-top: 50px;
 	}
 
-	.ls-menu-mobile {
+	.ls-menu-mobile, .ls-btn-menu-mobile {
 		display: none;
 	}
 
@@ -923,10 +924,6 @@ p {
 		text-decoration: none;
 		position: relative;
 		margin: 5px;
-	}
-
-	.ls-btn-menu-mobile {
-		display: none;
 	}
 
 	.ls-menu a:first-child {

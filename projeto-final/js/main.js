@@ -2,6 +2,7 @@ var btnContact = document.querySelector(".ls-btn-contact");
 var toggleModal = document.querySelectorAll(".ls-toggle-modal");
 var toggleMenu = document.querySelectorAll(".ls-toggle-menu-mobile");
 var menuMobile = document.querySelector(".ls-menu-mobile");
+var btnMenuMobileIcon = document.querySelector(".ls-btn-menu-mobile ion-icon");
 
 //Preloader
 window.addEventListener("load", () => {
@@ -26,6 +27,13 @@ toggleMenu.forEach(t => {
 		menuMobile.classList.toggle("ls-menu-mobile-is-closed");
 		menuMobile.classList.toggle("ls-menu-mobile-is-open");
 		menuOverlay.classList.toggle("ls-is-open");
+
+		var icon = btnMenuMobileIcon.getAttribute("name");
+		if (icon == "menu") {
+			btnMenuMobileIcon.setAttribute("name", "close");
+		} else {
+			btnMenuMobileIcon.setAttribute("name", "menu");
+		}
 	})
 })
 
