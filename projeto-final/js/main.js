@@ -1,6 +1,7 @@
 var btnContact = document.querySelector(".ls-btn-contact");
 var toggleModal = document.querySelectorAll(".ls-toggle-modal");
-
+var toggleMenu = document.querySelectorAll(".ls-toggle-menu-mobile");
+var menuMobile = document.querySelector(".ls-menu-mobile");
 
 //Preloader
 window.addEventListener("load", () => {
@@ -17,6 +18,16 @@ btnContact.addEventListener("click", function () {
 	boxInfo.classList.toggle("ls-is-open");
 	this.classList.toggle("ls-change-position-icon");
 });
+
+//Open and close menu mobile and overlay 
+toggleMenu.forEach(t => {
+	t.addEventListener("click", () => {
+		var menuOverlay = document.querySelector(".ls-menu-mobile-overlay");
+		menuMobile.classList.toggle("ls-menu-mobile-is-closed");
+		menuMobile.classList.toggle("ls-menu-mobile-is-open");
+		menuOverlay.classList.toggle("ls-is-open");
+	})
+})
 
 //Open and close modal and overlay
 for (let i = 0; i < toggleModal.length; i++) {
