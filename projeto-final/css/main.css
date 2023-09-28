@@ -263,13 +263,13 @@ p {
 	.ls-btn-menu-mobile {
 		background-color: #2ccb69;
 		display: block;
-		width: 54px;
-		height: 54px;
-		line-height: 52px;
+		width: 42px;
+		height: 42px;
+		line-height: 40px;
 		text-align: center;
 		position: fixed;
-		top: 30px;
-		right: 30px;
+		top: 40px;
+		right: 40px;
 		border-radius: 50%;
 		border: none;
 		z-index: 3000;
@@ -380,11 +380,16 @@ p {
 	}
 
 	.ls-home-presentation {
+		position: relative;
 		background-image: url("../images/joao-lemon-designer-home.png");
-		background-size: contain;
+		background-size: 130% auto;
 		background-repeat: no-repeat;
 		background-position: 50% bottom;
-		position: relative;
+	}
+
+	.ls-title-home-presentation {
+		font-size: 42px;
+		margin-top: 22%;
 	}
 
 	.ls-scroll-down {
@@ -1087,7 +1092,6 @@ p {
 .ls-title {
 	font-family: "Trocchi";
 	font-weight: normal;
-	font-size: 24px;
 }
 
 .ls-subtitle {
@@ -1099,10 +1103,8 @@ p {
 	font-size: 45px;
 }
 
-.ls-title-size-70 {
-	font-size: 70px;
-	white-space: nowrap;
-	width: auto;
+.ls-title-size-62 {
+	font-size: 62px;
 }
 
 .ls-text-center {
