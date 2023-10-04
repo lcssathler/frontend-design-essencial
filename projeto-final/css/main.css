@@ -465,7 +465,7 @@ p {
 		display: table;
 		position: absolute;
 		left: 0;
-		bottom: 15px;
+		bottom: 40px;
 	}
 
 	.ls-navigator-counter {
@@ -580,7 +580,7 @@ p {
 	.ls-slider-list .ls-portfolio-item-info {
 		width: calc(100% - 40px);
 		display: table;
-		margin-top: 68px;
+		margin-top: 53px;
 		position: relative;
 		left: -75px;
 		opacity: 0;
@@ -589,6 +589,10 @@ p {
 	.ls-portfolio-list .ls-portfolio-item-info {
 		width: calc(100% - 75px);
 		margin: 60px 20px 0 0;
+	}
+
+	.ls-title-large {
+		font-size: 42px;
 	}
 
 	.ls-slider-list .ls-portfolio-item-thumb,
@@ -1031,7 +1035,21 @@ p {
 		font-size: 1em;
 	}
 
+	.ls-slider-list .ls-portfolio-item-thumb {
+		padding: 30px 0 13px 0;
+	}
 
+	.ls-slider-list .ls-portfolio-item-thumb img {
+		width: 120%;
+		max-width: 120%;
+		left: -105px;
+	}
+
+	.ls-slider-list .ls-portfolio-item-thumb > button {
+		margin-top: 12px;
+		margin-right: 30px;
+		float: right;
+	}
 }
 
 @media screen and (min-width: 1200px) {
@@ -1047,30 +1065,13 @@ p {
 	.ls-home-presentation p {
 		font-size: 1.2em;
 	}
+
+	.ls-title-large {
+		font-size: 58px;
+	}
 }
 
-@media screen and (min-width: 1364px) {
-	/* .ls-home-informations {
-		max-width: 550px;
-	}
-
-	.ls-title-home-presentation {
-		font-size: 5em;
-	}
-
-	.ls-home-presentation p {
-		font-size: 2em;
-	}
-
-	.ls-home-presentation button {
-		height: 57px;
-		line-height: 57px;
-		padding: 0 32px;
-		border-radius: 46px;
-		font-size: 1.4em;
-		margin-top: 30px;
-	} */
-}
+@media screen and (min-width: 1364px) {}
 
 /* Buttons */
 .ls-btn {
@@ -1212,10 +1213,6 @@ p {
 .ls-subtitle {
 	font-family: "Open Sans";
 	font-weight: 800;
-}
-
-.ls-title-size-45 {
-	font-size: 45px;
 }
 
 .ls-title-size-62 {
