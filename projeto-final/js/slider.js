@@ -94,7 +94,7 @@ var portfolioItemThumbAnimations = (currentItemThumb) => {
 var growItemNavigator = (currentItemNavigator) => {
 	anime({
 		targets: currentItemNavigator,
-		width: 90,
+		width: '50%',
 		easing: "cubicBezier(0,1.01,.32,1)",
 	});
 };
@@ -165,7 +165,7 @@ rechangeCounterNavigator();
 
 anime({
 	targets: ".ls-item-active",
-	width: 90,
+	width: '50%',
 });
 
 nextItem.addEventListener("click", () => {

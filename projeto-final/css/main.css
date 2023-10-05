@@ -510,6 +510,7 @@ p {
 
 	.ls-item-navigator a.ls-item-active {
 		background-color: #2ccb69;
+		width: 50%;
 	}
 
 	.ls-item-navigator a:last-child {
@@ -592,7 +593,7 @@ p {
 	}
 
 	.ls-title-large {
-		font-size: 42px;
+		font-size: 38px;
 	}
 
 	.ls-slider-list .ls-portfolio-item-thumb,
@@ -1033,6 +1034,18 @@ p {
 
 	.ls-home-presentation p {
 		font-size: 1em;
+	}
+
+	.ls-portfolio-navigator {
+		width: 130px;
+	}
+
+	.ls-navigator-counter:before {
+		width: 30px;
+	}
+
+	.ls-navigator-counter span {
+		font-size: 100px;
 	}
 
 	.ls-slider-list .ls-portfolio-item-thumb {
