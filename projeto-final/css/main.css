@@ -465,7 +465,7 @@ p {
 		display: table;
 		position: absolute;
 		left: 0;
-		bottom: 40px;
+		bottom: 0
 	}
 
 	.ls-navigator-counter {
