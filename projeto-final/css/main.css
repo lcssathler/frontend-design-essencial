@@ -133,7 +133,7 @@ p {
 	.ls-overlay,
 	.ls-menu-mobile-overlay {
 		width: 100%;
-		height: 100vh;
+		height: calc(100vh + 30px);
 		display: none;
 		position: fixed;
 		background-color: #006627fd;
@@ -240,7 +240,7 @@ p {
 		background-color: #000;
 		display: block;
 		width: 240px;
-		height: 100vh;
+		height: calc(100vh + 30px);
 		position: fixed;
 		top: 0;
 		padding: 100px 0 0 20px;
@@ -370,11 +370,11 @@ p {
 		background-position-x: -2px;
 		background-position-y: -3px;
 		position: fixed;
-		bottom: 36px;
+		bottom: 63px;
 		right: 40px;
 		border: none;
 		border-radius: 50%;
-		z-index: 2;
+		z-index: 4000;
 		transition: all 0.3s ease-in-out;
 		cursor: pointer;
 	}
@@ -460,12 +460,11 @@ p {
 	/* HOME - PORTFOLIO */
 
 	.ls-portfolio-navigator {
-		width: 145px;
-		height: 200px;
+		width: 70%;
 		display: table;
 		position: absolute;
 		left: 0;
-		bottom: 0
+		bottom: 30px;
 	}
 
 	.ls-navigator-counter {
@@ -522,7 +521,7 @@ p {
 		width: 100%;
 		height: 45px;
 		display: flex;
-		justify-content: center;
+		justify-content: space-around;
 		align-items: center;
 		border-radius: 23px;
 	}
@@ -554,11 +553,11 @@ p {
 	.ls-slider-container {
 		display: block;
 		overflow: hidden;
+		padding-bottom: 120px;
 	}
 
 	.ls-slider-list {
 		width: auto;
-		height: 700px;
 		display: block;
 		list-style: none;
 	}
@@ -569,7 +568,7 @@ p {
 
 	.ls-slider-list .ls-portfolio-item {
 		display: block;
-		height: 500px;
+		height: auto;
 		float: left;
 		position: relative;
 		top: 0%;
@@ -922,6 +921,17 @@ p {
 		margin-top: 6px;
 	}
 
+	/* UTILITIES */
+	.ls-page-wrapper > .ls-full-height:first-child {
+		height: 100vh;
+		position: relative;
+	}
+
+	.ls-full-height {
+		height: auto;
+		position: relative;
+	}
+
 }
 
 @media screen and (min-width: 576px) {
@@ -1058,9 +1068,19 @@ p {
 		font-size: 1em;
 	}
 
+	.ls-slider-container {
+		padding: 0;
+	}
+
 	.ls-portfolio-navigator {
 		width: 130px;
 		top: 30%;
+		height: 200px;
+		display: table;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		margin: 0;
 	}
 
 	.ls-navigator-counter:before {
@@ -1069,6 +1089,10 @@ p {
 
 	.ls-navigator-counter span {
 		font-size: 100px;
+	}
+
+	.ls-items-next-prev {
+		justify-content: center;
 	}
 
 	.ls-slider-list .ls-portfolio-item {
@@ -1092,10 +1116,6 @@ p {
 		margin: 0;
 	}
 
-	/* .ls-slider-list .ls-portfolio-item-thumb {
-		padding: 30px 0 13px 0;
-	} */
-
 	.ls-slider-list .ls-portfolio-item-thumb img {
 		width: 120%;
 		max-width: 120%;
@@ -1106,6 +1126,13 @@ p {
 		margin-right: 7%;
 		margin-left: 0;
 		float: right;
+	}
+
+	/* UTILITIES */
+
+	.ls-full-height {
+		height: 100vh;
+		position: relative;
 	}
 }
 
@@ -1345,11 +1372,6 @@ p {
 
 .ls-text-center {
 	text-align: center;
-}
-
-.ls-full-height {
-	position: relative;
-	height: 100vh;
 }
 
 .ls-no-padding {
