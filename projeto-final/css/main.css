@@ -638,12 +638,12 @@ p {
 	}
 
 	.ls-slider-list .ls-portfolio-item-thumb img {
-		width: 100%;
+		width: 90%;
 		max-width: 100%;
 		height: auto;
 		display: block;
 		position: relative;
-		left: -50px;
+		left: 5%;
 		transform: scale(0);
 		transform-origin: center;
 	}
@@ -657,10 +657,12 @@ p {
 		left: -50px;
 	}
 
-	.ls-slider-list .ls-portfolio-item-thumb>button,
-	.ls-portfolio-list .ls-portfolio-item-thumb>button {
-		margin-top: 12px;
-		margin-right: 50px;
+	.ls-slider-list .ls-portfolio-item-thumb > button {
+		margin: 15px auto 0 auto;
+	}
+
+	.ls-portfolio-list .ls-portfolio-item-thumb > button  {
+		margin-top: 15px 70px 0 0;
 		float: right;
 	}
 
@@ -1097,7 +1099,9 @@ p {
 	}
 
 	.ls-slider-list .ls-portfolio-item-thumb > button {
-		margin-right: 30px;
+		margin-right: 7%;
+		margin-left: 0;
+		float: right;
 	}
 }
 
