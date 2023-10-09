@@ -572,7 +572,7 @@ p {
 		height: 500px;
 		float: left;
 		position: relative;
-		top: 15%;
+		top: 0%;
 	}
 
 	.ls-portfolio-list .ls-portfolio-item {
@@ -582,7 +582,7 @@ p {
 	.ls-slider-list .ls-portfolio-item-info {
 		width: calc(100% - 40px);
 		display: table;
-		margin-top: 53px;
+		margin-top: 30px;
 		position: relative;
 		left: -75px;
 		opacity: 0;
@@ -610,7 +610,7 @@ p {
 	.ls-portfolio-list .ls-portfolio-item-thumb {
 		width: 100%;
 		display: table;
-		padding: 50px 0 13px 0;
+		padding: 30px 0 13px 0;
 		margin-top: 20px;
 		position: relative;
 	}
@@ -1074,6 +1074,10 @@ p {
 	.ls-slider-list .ls-portfolio-item {
 		top: 20%;
 	}
+	
+	.ls-slider-list .ls-portfolio-item-info {
+		margin-top: 53px;
+	}
 
 	.ls-slider-list .ls-portfolio-item-info h1,
 	.ls-slider-list .ls-portfolio-item-info p {
@@ -1088,9 +1092,9 @@ p {
 		margin: 0;
 	}
 
-	.ls-slider-list .ls-portfolio-item-thumb {
+	/* .ls-slider-list .ls-portfolio-item-thumb {
 		padding: 30px 0 13px 0;
-	}
+	} */
 
 	.ls-slider-list .ls-portfolio-item-thumb img {
 		width: 120%;
@@ -1255,6 +1259,38 @@ p {
 
 .ls-mar-left-30 {
 	margin-left: 30px;
+}
+
+.ls-pad-top-15 {
+	padding-top: 15px;
+}
+
+.ls-pad-right-15 {
+	padding-right: 15px;
+}
+
+.ls-pad-bottom-15 {
+	padding-bottom: 15px;
+}
+
+.ls-pad-left-15 {
+	padding-left: 15px;
+}
+
+.ls-pad-top-30 {
+	padding-top: 30px;
+}
+
+.ls-pad-right-30 {
+	padding-right: 30px;
+}
+
+.ls-pad-bottom-30 {
+	padding-bottom: 30px;
+}
+
+.ls-pad-left-30 {
+	padding-left: 30px;
 }
 
 .ls-section-offset-top {
