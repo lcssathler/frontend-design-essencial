@@ -1,341 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Trocchi&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			rel="stylesheet"
-			href="css/bootstrap-grid.min.css"
-			type="text/css"
-		/>
-		<link rel="stylesheet" href="css/main.css" type="text/css" />
-		<title>John Lemon</title>
-	</head>
-	<body>
-		<div class="ls-preloader-inner ls-text-light">
-			<img
-				src="images/lemon-loader.svg"
-				alt="Lemon"
-				class="ls-mar-bottom-15"
-			/>
-			<p class="ls-mar-top-15">Squeezing some lemons... hold on!</p>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap"
+		rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Trocchi&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css" />
+	<link rel="stylesheet" href="css/main.css" type="text/css" />
+	<title>John Lemon</title>
+</head>
+
+<body>
+	<div class="ls-preloader-inner ls-text-light">
+		<img src="images/lemon-loader.svg" alt="Lemon" class="ls-mar-bottom-15" />
+		<p class="ls-mar-top-15">Squeezing some lemons... hold on!</p>
+	</div>
+
+	<div class="ls-overlay ls-toggle-modal ls-fade-in"></div>
+	<div class="ls-menu-mobile-overlay ls-toggle-menu-mobile ls-fade-in"></div>
+
+	<div class="ls-modal ls-bg-black ls-slide-top-in" id="ls-budget-modal">
+		<div class="ls-modal-header">
+			<h1 class="ls-title ls-text-green">Request for my services!</h1>
+			<div class="ls-modal-close ls-text-light ls-toggle-modal">
+				x
+			</div>
 		</div>
 
-		<div class="ls-overlay ls-toggle-modal ls-fade-in"></div>
-		<div class="ls-menu-mobile-overlay ls-toggle-menu-mobile ls-fade-in"></div>
+		<div class="ls-modal-body ls-mar-top-15">
+			<p class="ls-text-light">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				Architecto, asperiores.
+			</p>
 
-		<div class="ls-modal ls-bg-black ls-slide-top-in" id="ls-budget-modal">
-			<div class="ls-modal-header">
-				<h1 class="ls-title ls-text-green">Request for my services!</h1>
-				<div class="ls-modal-close ls-text-light ls-toggle-modal">
-					x
+			<form class="ls-form ls-mar-top-15">
+				<div class="ls-form-row-medium">
+					<label for="Email" class="ls-text-light">Email</label>
+					<input type="email" name="Email" id="ls-email" class="ls-field ls-field-medium" />
 				</div>
-			</div>
 
-			<div class="ls-modal-body ls-mar-top-15">
-				<p class="ls-text-light">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Architecto, asperiores.
-				</p>
+				<div class="ls-form-row-medium">
+					<label for="Name" class="ls-text-light">Name</label>
+					<input type="text" name="Name" id="ls-name" class="ls-field ls-field-medium" />
+				</div>
 
-				<form class="ls-form ls-mar-top-15">
-					<div class="ls-form-row-medium">
-						<label for="Email" class="ls-text-light">Email</label>
-						<input
-							type="email"
-							name="Email"
-							id="ls-email"
-							class="ls-field ls-field-medium"
-						/>
-					</div>
+				<div class="ls-form-row-medium">
+					<label for="Site" class="ls-text-light">Site</label>
+					<input type="text" name="Site" id="ls-site" class="ls-field ls-field-medium" />
+				</div>
 
-					<div class="ls-form-row-medium">
-						<label for="Name" class="ls-text-light">Name</label>
-						<input
-							type="text"
-							name="Name"
-							id="ls-name"
-							class="ls-field ls-field-medium"
-						/>
-					</div>
+				<div class="ls-form-row-medium">
+					<label for="Phone" class="ls-text-light">Phone</label>
+					<input type="tel" name="Phone" id="ls-phone" class="ls-field ls-field-medium" />
+				</div>
 
-					<div class="ls-form-row-medium">
-						<label for="Site" class="ls-text-light">Site</label>
-						<input
-							type="text"
-							name="Site"
-							id="ls-site"
-							class="ls-field ls-field-medium"
-						/>
-					</div>
+				<div class="ls-form-row-large">
+					<label for="Require" class="ls-text-light">What do you need for your project?</label>
+					<input type="text" name="Require" id="ls-require" class="ls-field ls-field-large" />
+				</div>
 
-					<div class="ls-form-row-medium">
-						<label for="Phone" class="ls-text-light">Phone</label>
-						<input
-							type="tel"
-							name="Phone"
-							id="ls-phone"
-							class="ls-field ls-field-medium"
-						/>
-					</div>
+				<div class="ls-form-row-medium ls-require">
+					<button class="ls-btn ls-btn-large ls-btn-green">
+						Send budget
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
 
-					<div class="ls-form-row-large">
-						<label for="Require" class="ls-text-light"
-							>What do you need for your project?</label
-						>
-						<input
-							type="text"
-							name="Require"
-							id="ls-require"
-							class="ls-field ls-field-large"
-						/>
-					</div>
-
-					<div class="ls-form-row-medium ls-require">
-						<button class="ls-btn ls-btn-large ls-btn-green">
-							Send budget
-						</button>
-					</div>
-				</form>
-			</div>
+	<header class="ls-topbar">
+		<div class="ls-logo">
+			<img src="images/logo.svg" alt="Lucas Sathler Desenvolvedor Logo" />
 		</div>
 
-		<header class="ls-topbar">
-			<div class="ls-logo">
-				<img
-					src="images/logo.svg"
-					alt="Lucas Sathler Desenvolvedor Logo"
-				/>
-			</div>
-
-			<nav class="ls-menu">
-				<a href="#">Home</a>
-				<a href="pages/portfolio.html">Portfolio</a>
-				<a href="pages/about-me.html">About Me</a>
-			</nav>
-		</header>
-		
-		<nav class="ls-menu-mobile ls-menu-mobile-is-closed">
+		<nav class="ls-menu">
 			<a href="#">Home</a>
 			<a href="pages/portfolio.html">Portfolio</a>
 			<a href="pages/about-me.html">About Me</a>
 		</nav>
+	</header>
 
-		<div class="ls-btn-menu-mobile ls-toggle-menu-mobile">
-			<ion-icon name="menu"></ion-icon>
+	<nav class="ls-menu-mobile ls-menu-mobile-is-closed">
+		<a href="#">Home</a>
+		<a href="pages/portfolio.html">Portfolio</a>
+		<a href="pages/about-me.html">About Me</a>
+	</nav>
+
+	<div class="ls-btn-menu-mobile ls-toggle-menu-mobile">
+		<ion-icon name="menu"></ion-icon>
+	</div>
+
+	<div class="ls-contact-info ls-bg-black ls-text-light">
+		<h2 class="ls-text-green ls-title">Contact me!</h2>
+		<p>lcssathler@gmail.com</p>
+		<p>+55 (31) 99362-0595</p>
+		<div class="ls-social-links ls-mar-top-15">
+			<a href="#" class="ls-social">
+				<img src="images/icon-instagram.svg" alt="Instagram" />
+			</a>
+
+			<a href="#" class="ls-social">
+				<img src="images/icon-twitter.svg" alt="Twitter" />
+			</a>
+
+			<a href="#" class="ls-social">
+				<img src="images/icon-dribbble.svg" alt="" />
+			</a>
 		</div>
 
-		<div class="ls-contact-info ls-bg-black ls-text-light">
-			<h2 class="ls-text-green ls-title">Contact me!</h2>
-			<p>lcssathler@gmail.com</p>
-			<p>+55 (31) 99362-0595</p>
-			<div class="ls-social-links ls-mar-top-15">
-				<a href="#" class="ls-social">
-					<img src="images/icon-instagram.svg" alt="Instagram" />
-				</a>
-
-				<a href="#" class="ls-social">
-					<img src="images/icon-twitter.svg" alt="Twitter" />
-				</a>
-
-				<a href="#" class="ls-social">
-					<img src="images/icon-dribbble.svg" alt="" />
-				</a>
-			</div>
-
-			<div class="ls-corner">
-				<img
-					src="images/corner.svg"
-					alt="Corner"
-					class="ls-corner-icon"
-				/>
-			</div>
+		<div class="ls-corner">
+			<img src="images/corner.svg" alt="Corner" class="ls-corner-icon" />
 		</div>
+	</div>
 
-		<button class="ls-btn-contact"></button>
+	<button class="ls-btn-contact"></button>
 
-		<div class="ls-page-wrapper">
-			<section class="ls-full-height ls-first-section ls-home-presentation">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-sm-11 offset-sm-1 col-md-5 offset-md-1 col-lg-4 offset-lg-1 col-xl-4 offset-xl-1 ls-home-informations ls-display-text">
-							<h1 class="ls-title-home-presentation ls-title ls-text-green">Hello, World!</h1>
-							
-							<p class="ls-text-light">I am a <span class="ls-text-green">developer back-end Java</span>. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore similique optio soluta dolorem molestiae autem!</p>
+	<div class="ls-page-wrapper">
+		<section class="ls-full-height ls-first-section ls-home-presentation">
+			<div class="container-fluid">
+				<div class="row">
+					<div
+						class="col-sm-11 offset-sm-1 col-md-5 offset-md-1 col-lg-4 offset-lg-1 col-xl-4 offset-xl-1 ls-home-informations ls-display-text">
+						<h1 class="ls-title-home-presentation ls-title ls-text-green">Hello, World!</h1>
 
-							<button href="#" class="ls-btn ls-btn-small ls-btn-green ls-btn-responsive ls-toggle-modal ls-mar-top-30">Request me!</button>
-						</div>
+						<p class="ls-text-light">I am a <span class="ls-text-green">developer back-end Java</span>.
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore similique optio soluta
+							dolorem molestiae autem!</p>
+
+						<button href="#"
+							class="ls-btn ls-btn-small ls-btn-green ls-btn-responsive ls-toggle-modal ls-mar-top-30">Request
+							me!</button>
 					</div>
+				</div>
 
-					<div class="ls-scroll-down">
-						<div class="ls-scroll-arrow">
-							<img src="images/arrow-down.svg" alt="Arrow" />
-						</div>
+				<div class="ls-scroll-down">
+					<div class="ls-scroll-arrow">
+						<img src="images/arrow-down.svg" alt="Arrow" />
 					</div>
-			</section>
+				</div>
+		</section>
 
-			<section class="ls-full-height" id="ls-home-portfolio">
-				<div class="container-fluid ls-no-padding">
-					<div class="row">
-						<div class="col-sm-2 order-2 order-sm-2 order-md-1">
-							<div class="ls-portfolio-navigator">
-								<div class="ls-navigator-counter d-none d-sm-none d-md-block">
-									<span class="ls-text-green">01</span>
+		<section class="ls-full-height" id="ls-home-portfolio">
+			<div class="container-fluid ls-no-padding">
+				<div class="row">
+					<div class="col-sm-2 order-2 order-sm-2 order-md-1">
+						<div class="ls-portfolio-navigator">
+							<div class="ls-navigator-counter d-none d-sm-none d-md-block">
+								<span class="ls-text-green">01</span>
+							</div>
+
+							<nav class="ls-item-navigator d-none d-sm-none d-md-block">
+								<a href="#" class="ls-item-active"></a>
+								<a href="#"></a>
+								<a href="#"></a>
+								<a href="#"></a>
+								<a href="#"></a>
+							</nav>
+
+							<div class="ls-items-next-prev ls-no-radius-left">
+								<div class="ls-item-prev">
+									<ion-icon name="caret-back"></ion-icon>
 								</div>
 
-								<nav class="ls-item-navigator d-none d-sm-none d-md-block">
-									<a href="#" class="ls-item-active"></a>
-									<a href="#" ></a>
-									<a href="#" ></a>
-									<a href="#" ></a>
-									<a href="#" ></a>
-								</nav>
+								<div class="ls-items-counter">
+									<span class="ls-current-slide">01</span>
+									/
+									<span class="ls-total-slide">05</span>
+								</div>
 
-								<div class="ls-items-next-prev ls-no-radius-left">
-									<div class="ls-item-prev">
-										<ion-icon name="caret-back"></ion-icon>
-									</div>
-
-									<div class="ls-items-counter">
-										<span class="ls-current-slide">01</span>
-										/
-										<span class="ls-total-slide">05</span>
-									</div>
-
-									<div class="ls-item-next">
-										<ion-icon name="caret-forward"></ion-icon>
-									</div>
+								<div class="ls-item-next">
+									<ion-icon name="caret-forward"></ion-icon>
 								</div>
 							</div>
 						</div>
+					</div>
 
-						<div class="col-sm-10 order-1 order-sm-1 order-md-2">
-							<div class="ls-slider-container ls-full-height">
-								<ul class="ls-slider-list ls-full-height">
-									<li class="ls-portfolio-item ls-slide-active"> 
-										<div class="row">
-											<div class="ls-slider-item-info col-sm-12 col-md-12 col-lg-4 order-2 order-sm-2 order-lg-1 ls-mar-left-15">
-												<div class="ls-portfolio-item-info ls-fade-from-left">
-													<h1 class="ls-title ls-title-large ls-text-light ls-mar-bottom-15">Startup Rocketz Website</h1>
-													<p class="ls-text-light ls-mar-bottom-30">Lorem ipsum dolor sit ol, llamet consectetur, adipisicing.</p>
-													<button class="ls-btn ls-btn-medium ls-btn-green" >Visit project</button>
-												</div>
-											</div>
+					<div class="col-sm-10 order-1 order-sm-1 order-md-2">
+						<div class="ls-slider-container ls-full-height">
+							<ul class="ls-slider-list ls-full-height">
+								<li class="ls-portfolio-item ls-slide-active">
+									<div class="row">
+										<div class="col-sm-12 d-block d-sm-block d-lg-none ls-mar-top-30 ls-pad-top-30">
+											<h2 class="ls-title ls-title-large ls-text-center ls-text-green">Selected projects</h2>
+										</div>
+									</div>
 
-											<div class="col-sm-12 col-md-12 col-lg-6 offset-lg-1 order-1 order-sm-1 order-lg-2">
-												<div class="ls-portfolio-item-thumb">
-													<div class="ls-portfolio-item-box d-none d-sm-none d-lg-block ls-scale-right"></div>
-													<img src="images/thumb-1.jpg" alt="Startup Rocketz" class="ls-scale-up">
-													<button class="ls-btn ls-btn-medium ls-btn-dark">
-															Visit page
-															<ion-icon name="arrow-forward-outline"></ion-icon>
-													</button>
-												</div>
+									<div class="row">
+										<div
+											class="ls-slider-item-info col-sm-12 col-md-12 col-lg-4 order-2 order-sm-2 order-lg-1 ls-mar-left-15">
+											<div class="ls-portfolio-item-info ls-fade-from-left">
+												<h1 class="ls-title ls-title-large ls-text-light ls-mar-bottom-15">
+													Startup Rocketz Website</h1>
+												<p class="ls-text-light ls-mar-bottom-30">Lorem ipsum dolor sit ol,
+													llamet consectetur, adipisicing.</p>
+												<button class="ls-btn ls-btn-medium ls-btn-green">Visit project</button>
 											</div>
 										</div>
-									</li>
 
-									<li class="ls-portfolio-item">
-										<div class="row">
-											<div class="ls-slider-item-info col-sm-12 col-md-12 col-lg-4 order-2 order-sm-2 order-lg-1 ls-mar-left-15">
-												<div class="ls-portfolio-item-info">
-													<h1 class="ls-title ls-title-large ls-text-light ls-mar-bottom-15">Manage it! Mobile App</h1>
-													<p class="ls-text-light ls-mar-bottom-30">Lorem ipsum dolor sit amet consectetur, adipisicing.</p>
-													<button class="ls-btn ls-btn-medium ls-btn-green" href="pages/portfolio/">Visit project</button>
+										<div
+											class="col-sm-12 col-md-12 col-lg-6 offset-lg-1 order-1 order-sm-1 order-lg-2">
+											<div class="ls-portfolio-item-thumb">
+												<div
+													class="ls-portfolio-item-box d-none d-sm-none d-lg-block ls-scale-right">
 												</div>
-											</div>
-
-											<div class="col-sm-12 col-md-12 col-lg-6 offset-lg-1 order-1 order-sm-1 order-lg-2">
-												<div class="ls-portfolio-item-thumb">
-													<div class="ls-portfolio-item-box d-none d-sm-none d-lg-block"></div>
-													<img src="images/thumb-2.jpg" alt="Mobile Application">
-													<button class="ls-btn ls-btn-medium ls-btn-dark">Visit page <ion-icon name="arrow-forward-outline"></ion-icon>
-												</div>
+												<img src="images/thumb-1.jpg" alt="Startup Rocketz" class="ls-scale-up">
+												<button class="ls-btn ls-btn-medium ls-btn-dark">
+													Visit page
+													<ion-icon name="arrow-forward-outline"></ion-icon>
+												</button>
 											</div>
 										</div>
-									</li>
+									</div>
+								</li>
 
-									<li class="ls-portfolio-item">
-										<div class="row">
-											<div class="ls-slider-item-info col-sm-12 col-md-12 col-lg-4 order-2 order-sm-2 order-lg-1 ls-mar-left-15">
-												<div class="ls-portfolio-item-info">
-													<h1 class="ls-title ls-title-large ls-text-light ls-mar-bottom-15">Vinyassa! Mobile Application</h1>
-													<p class="ls-text-light ls-mar-bottom-30">Lorem ipsum dolor sit amet consectetur, adipisicing.</p>
-													<button class="ls-btn ls-btn-medium ls-btn-green">Visit project</button>
-												</div>
-											</div>
-
-											<div class="col-sm-12 col-md-12 col-lg-6 offset-lg-1 order-1 order-sm-1 order-lg-2">
-												<div class="ls-portfolio-item-thumb">
-													<div class="ls-portfolio-item-box d-none d-sm-none d-lg-block"></div>
-													<img src="images/thumb-3.jpg" alt="Vinyassa">
-													<button class="ls-btn ls-btn-medium ls-btn-dark">Visit page <ion-icon name="arrow-forward-outline"></ion-icon>
-												</div>
+								<li class="ls-portfolio-item">
+									<div class="row">
+										<div
+											class="ls-slider-item-info col-sm-12 col-md-12 col-lg-4 order-2 order-sm-2 order-lg-1 ls-mar-left-15">
+											<div class="ls-portfolio-item-info">
+												<h1 class="ls-title ls-title-large ls-text-light ls-mar-bottom-15">
+													Manage it! Mobile App</h1>
+												<p class="ls-text-light ls-mar-bottom-30">Lorem ipsum dolor sit amet
+													consectetur, adipisicing.</p>
+												<button class="ls-btn ls-btn-medium ls-btn-green"
+													href="pages/portfolio/">Visit project</button>
 											</div>
 										</div>
-									</li>
 
-									<li class="ls-portfolio-item">
-										<div class="row">
-											<div class="ls-slider-item-info col-sm-12 col-md-12 col-lg-4 order-2 order-sm-2 order-lg-1 ls-mar-left-15">
-												<div class="ls-portfolio-item-info">
-													<h1 class="ls-title ls-title-large ls-text-light ls-mar-bottom-15">Website for Agency</h1>
-													<p class="ls-text-light ls-mar-bottom-30">Lorem ipsum dolor sit amet consectetur, adipisicing.</p>
-													<button class="ls-btn ls-btn-medium ls-btn-green">Visit project</button>
-												</div>
-											</div>
-
-											<div class="col-sm-12 col-md-12 col-lg-6 offset-lg-1 order-1 order-sm-1 order-lg-2">
-												<div class="ls-portfolio-item-thumb">
-													<div class="ls-portfolio-item-box d-none d-sm-none d-lg-block"></div>
-													<img src="images/thumb-4.jpg" alt="Website for Agency">
-													<button class="ls-btn ls-btn-medium ls-btn-dark">Visit page <ion-icon name="arrow-forward-outline"></ion-icon>
-												</div>
+										<div
+											class="col-sm-12 col-md-12 col-lg-6 offset-lg-1 order-1 order-sm-1 order-lg-2">
+											<div class="ls-portfolio-item-thumb">
+												<div class="ls-portfolio-item-box d-none d-sm-none d-lg-block"></div>
+												<img src="images/thumb-2.jpg" alt="Mobile Application">
+												<button class="ls-btn ls-btn-medium ls-btn-dark">Visit page <ion-icon
+														name="arrow-forward-outline"></ion-icon>
 											</div>
 										</div>
-									</li>
+									</div>
+								</li>
 
-									<li class="ls-portfolio-item">
-										<div class="row">
-											<div class="ls-slider-item-info col-sm-12 col-md-12 col-lg-4 order-2 order-sm-2 order-lg-1 ls-mar-left-15">
-												<div class="ls-portfolio-item-info">
-													<h1 class="ls-title ls-title-large ls-text-light ls-mar-bottom-15">Total control. Web Application</h1>
-													<p class="ls-text-light ls-mar-bottom-30">Lorem ipsum dolor sit amet consectetur, adipisicing.</p>
-													<button class="ls-btn ls-btn-medium ls-btn-green">Visit project</button>
-												</div>
-											</div>
-
-											<div class="col-sm-12 col-md-12 col-lg-6 offset-lg-1 order-1 order-sm-1 order-lg-2">
-												<div class="ls-portfolio-item-thumb">
-													<div class="ls-portfolio-item-box d-none d-sm-none d-lg-block"></div>
-													<img src="images/thumb-5.jpg" alt="Web application">
-													<button class="ls-btn ls-btn-medium ls-btn-dark">Visit page <ion-icon name="arrow-forward-outline"></ion-icon>
-												</div>
+								<li class="ls-portfolio-item">
+									<div class="row">
+										<div
+											class="ls-slider-item-info col-sm-12 col-md-12 col-lg-4 order-2 order-sm-2 order-lg-1 ls-mar-left-15">
+											<div class="ls-portfolio-item-info">
+												<h1 class="ls-title ls-title-large ls-text-light ls-mar-bottom-15">
+													Vinyassa! Mobile Application</h1>
+												<p class="ls-text-light ls-mar-bottom-30">Lorem ipsum dolor sit amet
+													consectetur, adipisicing.</p>
+												<button class="ls-btn ls-btn-medium ls-btn-green">Visit project</button>
 											</div>
 										</div>
-									</li>
-								</ul>
-							</div>
+
+										<div
+											class="col-sm-12 col-md-12 col-lg-6 offset-lg-1 order-1 order-sm-1 order-lg-2">
+											<div class="ls-portfolio-item-thumb">
+												<div class="ls-portfolio-item-box d-none d-sm-none d-lg-block"></div>
+												<img src="images/thumb-3.jpg" alt="Vinyassa">
+												<button class="ls-btn ls-btn-medium ls-btn-dark">Visit page <ion-icon
+														name="arrow-forward-outline"></ion-icon>
+											</div>
+										</div>
+									</div>
+								</li>
+
+								<li class="ls-portfolio-item">
+									<div class="row">
+										<div
+											class="ls-slider-item-info col-sm-12 col-md-12 col-lg-4 order-2 order-sm-2 order-lg-1 ls-mar-left-15">
+											<div class="ls-portfolio-item-info">
+												<h1 class="ls-title ls-title-large ls-text-light ls-mar-bottom-15">
+													Website for Agency</h1>
+												<p class="ls-text-light ls-mar-bottom-30">Lorem ipsum dolor sit amet
+													consectetur, adipisicing.</p>
+												<button class="ls-btn ls-btn-medium ls-btn-green">Visit project</button>
+											</div>
+										</div>
+
+										<div
+											class="col-sm-12 col-md-12 col-lg-6 offset-lg-1 order-1 order-sm-1 order-lg-2">
+											<div class="ls-portfolio-item-thumb">
+												<div class="ls-portfolio-item-box d-none d-sm-none d-lg-block"></div>
+												<img src="images/thumb-4.jpg" alt="Website for Agency">
+												<button class="ls-btn ls-btn-medium ls-btn-dark">Visit page <ion-icon
+														name="arrow-forward-outline"></ion-icon>
+											</div>
+										</div>
+									</div>
+								</li>
+
+								<li class="ls-portfolio-item">
+									<div class="row">
+										<div
+											class="ls-slider-item-info col-sm-12 col-md-12 col-lg-4 order-2 order-sm-2 order-lg-1 ls-mar-left-15">
+											<div class="ls-portfolio-item-info">
+												<h1 class="ls-title ls-title-large ls-text-light ls-mar-bottom-15">Total
+													control. Web Application</h1>
+												<p class="ls-text-light ls-mar-bottom-30">Lorem ipsum dolor sit amet
+													consectetur, adipisicing.</p>
+												<button class="ls-btn ls-btn-medium ls-btn-green">Visit project</button>
+											</div>
+										</div>
+
+										<div
+											class="col-sm-12 col-md-12 col-lg-6 offset-lg-1 order-1 order-sm-1 order-lg-2">
+											<div class="ls-portfolio-item-thumb">
+												<div class="ls-portfolio-item-box d-none d-sm-none d-lg-block"></div>
+												<img src="images/thumb-5.jpg" alt="Web application">
+												<button class="ls-btn ls-btn-medium ls-btn-dark">Visit page <ion-icon
+														name="arrow-forward-outline"></ion-icon>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
-			</section>
-		</div>
+			</div>
+		</section>
+	</div>
 
-		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/inview.min.js"></script>
-		<script src="js/anime.min.js"></script>	
-		<script src="js/slider.js"></script>
-		<script src="js/main.js"></script>
-	</body>
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/inview.min.js"></script>
+	<script src="js/anime.min.js"></script>
+	<script src="js/slider.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
 </html>
