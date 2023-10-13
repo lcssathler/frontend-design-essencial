@@ -130,6 +130,23 @@ p {
 		z-index: 10;
 	}
 
+	.preloader-container {
+		display: table;
+		width: auto;
+		height: auto;
+		position: absolute;
+		right: 0;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		text-align: center;
+	}
+
+	.ls-preloader-inner img {
+		width: 80%;
+	}
+
 	.ls-overlay,
 	.ls-menu-mobile-overlay {
 		width: 100%;
@@ -405,7 +422,7 @@ p {
 
 	.ls-home-presentation p {
 		text-align: center;
-		font-size: 0.8em;
+		font-size: 1em;
 	}
 
 	.ls-home-presentation button {
@@ -529,6 +546,8 @@ p {
 		justify-content: space-around;
 		align-items: center;
 		border-radius: 23px;
+		position: relative;
+		z-index: 1000;
 	}
 
 	.ls-items-next-prev>div {
@@ -586,7 +605,7 @@ p {
 	.ls-slider-list .ls-portfolio-item-info {
 		width: calc(100% - 40px);
 		display: table;
-		margin-top: 30px;
+		margin: 30px auto 0 auto;
 		position: relative;
 		left: -75px;
 		opacity: 0;
@@ -951,7 +970,7 @@ p {
 	}
 
 	.ls-home-presentation {
-		background-size: 65% auto;
+		background-size: 80% auto;
 		background-position: 50% 105%;
 	}
 
@@ -963,6 +982,11 @@ p {
 @media screen and (min-width: 620px) {
 	.ls-home-informations {
 		max-width: 285px;
+	}
+
+	.ls-display-text {
+		margin-top: 6%;
+		margin-left: 3%;
 	}
 
 	.ls-title-home-presentation {
@@ -986,15 +1010,13 @@ p {
 
 @media screen and (min-width: 768px) {
 	.ls-home-presentation {
-		background-size: 90vh auto;
+		background-size: 100vh auto;
 		background-position: 50% bottom;
 	}
 
 	.ls-home-informations {
 		max-width: 310px;
 	}
-
-
 }
 
 @media screen and (min-width: 992px) {
@@ -1105,7 +1127,7 @@ p {
 	}
 
 	.ls-slider-list .ls-portfolio-item-thumb {
-		right: 40px;
+		right: 15px;
 	}
 
 	.ls-slider-list .ls-portfolio-item-info {
@@ -1126,8 +1148,8 @@ p {
 	}
 
 	.ls-slider-list .ls-portfolio-item-thumb img {
-		width: 120%;
-		max-width: 120%;
+		width: 115%;
+		max-width: 115%;
 		left: -105px;
 	}
 
