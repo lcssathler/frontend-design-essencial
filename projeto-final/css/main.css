@@ -398,7 +398,7 @@ p {
 	}
 
 	.ls-title-home-presentation {
-		font-size: 2em;
+		font-size: 42px;
 		margin-top: 12vh;
 		text-align: center;
 	}
@@ -1104,6 +1104,10 @@ p {
 		top: 20%;
 	}
 
+	.ls-slider-list .ls-portfolio-item-thumb {
+		right: 40px;
+	}
+
 	.ls-slider-list .ls-portfolio-item-info {
 		margin-top: 53px;
 	}
@@ -1202,6 +1206,11 @@ p {
 
 	.ls-slider-list .ls-portfolio-item-thumb {
 		padding: 75px 0 13px 0;
+		right: 0;
+	}
+
+	.ls-slider-list .ls-portfolio-item-box {
+		left: -10px;
 	}
 
 	.ls-slider-list .ls-portfolio-item-thumb img {

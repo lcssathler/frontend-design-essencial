@@ -24,7 +24,6 @@ if (postGalleryHeight > 1296) {
   postGallery.style.maxHeight = 1296 + "px";
 }
 
-
 //Parallel
 AOS.init();
 var rellax = new Rellax(".rellax");
