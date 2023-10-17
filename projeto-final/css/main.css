@@ -597,10 +597,19 @@ p {
 		float: left;
 		position: relative;
 		top: 0%;
+
+	}
+
+	.ls-portfolio-section {
+		margin-top: 100px;
 	}
 
 	.ls-portfolio-list .ls-portfolio-item {
 		margin-bottom: 100px;
+	}
+
+	.ls-portfolio-list .ls-portfolio-item:nth-child(5) {
+		height: calc(100vh - 100px);
 	}
 
 	.ls-slider-list .ls-portfolio-item-info {
@@ -613,8 +622,8 @@ p {
 	}
 
 	.ls-portfolio-list .ls-portfolio-item-info {
-		width: calc(100% - 75px);
-		margin: 60px 20px 0 0;
+		width: 100%;
+		margin: 0;
 	}
 
 	.ls-slider-list .ls-portfolio-item-info h1,
@@ -637,6 +646,11 @@ p {
 		padding: 30px 0 13px 0;
 		margin-top: 20px;
 		position: relative;
+	}
+
+	.ls-portfolio-list .ls-portfolio-item-thumb {
+		padding: 0;
+		margin: 0;
 	}
 
 	.ls-slider-list .ls-portfolio-item-box {
@@ -678,7 +692,6 @@ p {
 		height: auto;
 		display: block;
 		position: relative;
-		left: -50px;
 	}
 
 	.ls-slider-list .ls-portfolio-item-thumb>button {
@@ -686,35 +699,30 @@ p {
 	}
 
 	.ls-portfolio-list .ls-portfolio-item-thumb>button {
-		margin: 15px 50px 0 0;
-		float: right;
+		float: none;
+		margin: 15px auto 0 auto;
 	}
 
 	/* PORTFOLIO */
 	.ls-portfolio-list .ls-portfolio-item:nth-child(odd) .ls-portfolio-item-info {
-		text-align: right;
+		text-align: center;
+
 	}
 
 	.ls-portfolio-list .ls-portfolio-item:nth-child(odd) .ls-portfolio-item-info button {
 		float: right;
 	}
 
+	.ls-portfolio-list .ls-portfolio-item:nth-child(even) .ls-portfolio-item-info {
+		text-align: center;
+	}
+
 	.ls-portfolio-list .ls-portfolio-item:nth-child(even)>.row {
 		flex-direction: row-reverse;
 	}
 
-	.ls-portfolio-list .ls-portfolio-item:nth-child(even) .ls-portfolio-item-thumb img {
-		left: 50px;
-	}
 
-	.ls-portfolio-list .ls-portfolio-item:nth-child(even) .ls-portfolio-item-thumb button {
-		margin-left: 50px;
-		float: left;
-	}
 
-	.ls-portfolio-list .ls-portfolio-item:nth-child(even) .ls-portfolio-item-info {
-		margin-left: 75px;
-	}
 
 	/* ABOUT ME */
 
@@ -1168,6 +1176,66 @@ p {
 		float: right;
 	}
 
+	.ls-portfolio-section {
+		margin-top: 50px;
+	}
+
+	.ls-portfolio-list .ls-portfolio-item {
+		height: 100vh;
+		margin: 0;
+	}
+
+	.ls-portfolio-list .ls-portfolio-item-info {
+		width: 100%;
+		margin: 70px 0 0 0;
+	}
+
+	.ls-portfolio-list .ls-portfolio-item-thumb {
+		padding: 30px 0 13px 0;
+		margin-top: 20px;
+	}
+
+	.ls-portfolio-list .ls-portfolio-item:nth-child(odd) .ls-portfolio-item-info {
+		text-align: right;
+	}
+
+	.ls-portfolio-list .ls-portfolio-item:nth-child(odd) .ls-portfolio-item-info button {
+		float: right;
+	}
+
+	.ls-portfolio-list .ls-portfolio-item-thumb img {
+		width: calc(100% + 30px);
+		max-width: calc(100% + 30px);
+	}
+
+	.ls-portfolio-list .ls-portfolio-item:nth-child(even) .ls-portfolio-item-thumb img {
+		left: 30px;
+	}
+
+	.ls-portfolio-list .ls-portfolio-item:nth-child(odd) .ls-portfolio-item-thumb img {
+		left: -60px;
+	}
+
+	.ls-portfolio-list .ls-portfolio-item:nth-child(odd) .ls-portfolio-item-thumb button {
+		float: right;
+		margin: 15px 50px 0 0;
+	}
+
+	.ls-portfolio-list .ls-portfolio-item:nth-child(even) .ls-portfolio-item-info {
+		width: 100%;
+		text-align: left;
+	}
+
+	.ls-portfolio-list .ls-portfolio-item:nth-child(even) .ls-portfolio-item-thumb button {
+		float: left;
+		margin: 15px 0 0 50px;
+	}
+
+	.ls-portfolio-list .ls-portfolio-item:nth-child(even)>.row {
+		flex-direction: row-reverse;
+	}
+
+
 	/* UTILITIES */
 
 	.ls-full-height {
@@ -1252,6 +1320,23 @@ p {
 
 	.ls-slider-list .ls-portfolio-item-thumb>button {
 		margin-right: 70px;
+	}
+
+	.ls-portfolio-list .ls-portfolio-item-thumb {
+		padding: 60px 0 13px 0;
+	}
+
+	.ls-portfolio-list .ls-portfolio-item-thumb img {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.ls-portfolio-list .ls-portfolio-item:nth-child(even) .ls-portfolio-item-thumb img {
+		left: 60px;
+	}
+
+	.ls-portfolio-list .ls-portfolio-item:nth-child(odd) .ls-portfolio-item-thumb img {
+		left: -60px;
 	}
 }
 
@@ -1383,10 +1468,6 @@ p {
 
 .ls-pad-left-30 {
 	padding-left: 30px;
-}
-
-.ls-section-offset-top {
-	margin-top: 100px;
 }
 
 .ls-text-green {
