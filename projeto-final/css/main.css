@@ -643,7 +643,7 @@ p {
 	.ls-portfolio-list .ls-portfolio-item-thumb {
 		width: 100%;
 		display: table;
-		padding: 30px 0 13px 0;
+		padding: 40px 0 13px 0;
 		margin-top: 20px;
 		position: relative;
 	}
@@ -1304,7 +1304,7 @@ p {
 	}
 
 	.ls-slider-list .ls-portfolio-item-thumb {
-		padding: 75px 0 13px 0;
+		padding: 60px 0 15px 0;
 		right: 0;
 	}
 
