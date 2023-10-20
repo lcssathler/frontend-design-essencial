@@ -781,31 +781,25 @@ p {
 	}
 
 	.ls-hero-inner-content {
-		position: relative;
 		z-index: 1;
-		/* Stacking content */
-	}
-
-	.ls-hero-inner-content:before {
-		content: "";
 		display: block;
 		width: 100%;
 		height: 100%;
 		background-color: rgba(0, 0, 0, 0.85);
-		position: absolute;
-		top: -65px;
-		left: -65px;
-		box-sizing: content-box;
-		padding: 65px;
-		z-index: -1;
-		/* Stacking content */
+		padding: 50px 65px;
 	}
 
 	.ls-project-stats {
 		width: 95%;
 		height: 100%;
 		display: table;
-		border-right: 1px solid #2ccb69;
+		border: none;
+	}
+
+	.ls-project-description {
+		display: table;
+		width: 100%;
+		margin-top: 30px;
 	}
 
 	.ls-post {
@@ -1233,6 +1227,17 @@ p {
 
 	.ls-portfolio-list .ls-portfolio-item:nth-child(even)>.row {
 		flex-direction: row-reverse;
+	}
+
+
+	/* ------- MANAGE ------- IT */
+
+	.ls-project-stats {
+		border-right: 1px solid #2ccb69;
+	}
+
+	.ls-project-description {
+		margin-top: 0;
 	}
 
 
