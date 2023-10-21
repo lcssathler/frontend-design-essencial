@@ -761,15 +761,16 @@ p {
 
 	.ls-hero {
 		display: block;
-		height: 500px;
 		background-image: url("../pages/portfolio/img/hero.png");
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
 	}
 
-	.ls-hero h1 {
+	.ls-hero .ls-title-large,
+	.ls-post .ls-title-large {
 		margin-bottom: 50px;
+		font-size: 35px;
 	}
 
 	.ls-hero p:not(.ls-hero p:last-child) {
@@ -777,7 +778,7 @@ p {
 	}
 
 	.ls-hero-inner {
-		height: 500px;
+		padding: 75px 0;
 	}
 
 	.ls-hero-inner-content {
@@ -786,7 +787,7 @@ p {
 		width: 100%;
 		height: 100%;
 		background-color: rgba(0, 0, 0, 0.85);
-		padding: 50px 65px;
+		padding: 20px 25px;
 	}
 
 	.ls-project-stats {
@@ -972,14 +973,6 @@ p {
 		height: 31px;
 	}
 
-	/* .ls-page-wrapper{
-		width: 100%;
-		height: 100vh;
-		display: table;
-		background-color: #1c1c1c;
-		border: 30px solid #000;
-	} */
-
 	.ls-home-presentation {
 		background-size: 80% auto;
 		background-position: 50% 105%;
@@ -987,6 +980,18 @@ p {
 
 	.ls-title-home-presentation {
 		margin-top: 10vh;
+	}
+
+
+	/* ----- MANAGE IT ----- */
+
+	.ls-hero-inner-content {
+		z-index: 1;
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.85);
+		padding: 50px 65px;
 	}
 }
 
@@ -1376,7 +1381,7 @@ p {
 .ls-btn-medium {
 	height: 38px;
 	line-height: 38px;
-	padding: 0 27px;
+	padding: 0 20px;
 	border-radius: 19px;
 	font-size: 14px;
 }
