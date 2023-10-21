@@ -1,5 +1,4 @@
 var postGallery = document.querySelector(".ls-post-gallery");
-console.log(postGallery.clientHeight);
 var galleryImages = document.querySelectorAll(".ls-thumb-img");
 var overlay = document.querySelector(".ls-overlay");
 var galleryFrameContainer;
@@ -17,12 +16,7 @@ totalCounter.innerHTML = galleryImages.length;
 
 //Manage it - excluding blank space under gallery
 var postGalleryHeight = postGallery.clientHeight;
-if (postGalleryHeight > 1296) {
-  postGallery.style.height = (postGalleryHeight - 270) + "px";
-  postGallery.style.minHeight = (postGalleryHeight - 270).toString() + "px";
-} else {
-  postGallery.style.maxHeight = 1296 + "px";
-}
+postGallery.style.height = postGalleryHeight - 270 + "px";
 
 //Parallel
 AOS.init();

@@ -825,7 +825,7 @@ p {
 
 	.ls-post-gallery {
 		display: block;
-		max-height: 1296px;
+		/* max-height: 1296px; */
 	}
 
 	.ls-post-gallery>.container {
