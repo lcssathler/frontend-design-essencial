@@ -960,6 +960,10 @@ p {
 		position: relative;
 	}
 
+	.ls-text-center-mobile-view {
+		text-align: center;
+	}
+
 }
 
 @media screen and (min-width: 576px) {
@@ -1032,6 +1036,13 @@ p {
 
 	.ls-home-informations {
 		max-width: 310px;
+	}
+
+
+	/* --- UTILITIES --- */ 
+
+	.ls-text-center-mobile-view {
+		text-align: left;
 	}
 }
 
@@ -1548,7 +1559,8 @@ p {
 	display: block;
 	width: 100%;
 	max-width: 100%;
-	height: auto;
+	/* height: auto; */
+	height: 100%;
 }
 
 .ls-page-list {
