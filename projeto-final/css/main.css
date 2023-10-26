@@ -839,13 +839,14 @@ p {
 
 	.ls-gallery-frame-container {
 		display: table;
-		width: 70%;
+		width: 50%;
 		position: fixed;
 		top: 0;
 		bottom: 0;
 		right: 0;
 		left: 0;
 		margin: auto;
+		padding-top: 25px;
 		z-index: 3000;
 	}
 
@@ -897,6 +898,7 @@ p {
 		display: block;
 		width: 100%;
 		height: auto;
+		max-height: 86vh;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -928,12 +930,13 @@ p {
 		display: block;
 		width: 87%;
 		height: auto;
+		max-height: 82vh;
 		max-width: 87%;
 		margin: 0 auto;
 		border-radius: 22px;
 		z-index: 3000;
 		position: relative;
-		top: 16px;
+		top: 12px;
 	}
 
 	.ls-gallery-frame-inner .ls-items-next-prev {
@@ -962,6 +965,12 @@ p {
 		text-align: center;
 	}
 
+}
+
+@media screen and (min-width: 540px) {
+	.ls-gallery-frame-container {
+		width: 38%;
+	}
 }
 
 @media screen and (min-width: 576px) {
@@ -1027,6 +1036,18 @@ p {
 }
 
 @media screen and (min-width: 768px) {
+	.ls-gallery-frame-container {
+		width: 30%;
+	}
+
+	.ls-gallery-frame-img {
+		top: 11px;
+	}
+
+	.ls-gallery-frame-inner .ls-items-next-prev {
+		margin-top: 40px;
+	}
+
 	.ls-home-presentation {
 		background-size: 100vh auto;
 		background-position: 50% bottom;
@@ -1045,6 +1066,16 @@ p {
 }
 
 @media screen and (min-width: 992px) {
+
+
+	.ls-gallery-frame-container {
+		width: 290px;
+	}
+
+	.ls-gallery-frame-img {
+		top: 10px;
+	}
+
 	.ls-logo {
 		width: 64px;
 		height: 90px;
