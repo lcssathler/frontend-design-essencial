@@ -749,6 +749,17 @@ p {
 		bottom: 0;
 	}
 
+	.ls-title-about-me, .ls-info-about-me, .ls-awards-about-me {
+		width: 100%;
+		display: table;
+		float: left;
+	}
+
+	.ls-title-about-me h1{
+		font-size: 90px;
+		word-spacing: 20px;
+	}
+
 	.ls-page-list li::before {
 		content: "";
 		background-color: #2ccb69;
@@ -1291,6 +1302,17 @@ p {
 		flex-direction: row-reverse;
 	}
 
+	/* ------- ABOUT ME ------- */
+	
+	.ls-info-about-me{
+		width: 45%;
+	}
+
+	.ls-awards-about-me {
+		width: 55%;
+		padding-left: 15px;
+	}
+
 
 	/* ------- MANAGE ------- IT */
 
@@ -1408,6 +1430,15 @@ p {
 
 	.ls-portfolio-list .ls-portfolio-item:nth-child(odd) .ls-portfolio-item-thumb img {
 		left: -60px;
+	}
+
+	/* ------- ABOUT ME -------- */
+	.ls-info-about-me{
+		width: 35%;
+	}
+
+	.ls-awards-about-me {
+		width: 65%;
 	}
 }
 
