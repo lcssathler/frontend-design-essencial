@@ -726,14 +726,27 @@ p {
 
 	/* ABOUT ME */
 
-	#ls-avatar-about-me img {
+	.ls-about-me {
+		display: block;
+		width: 100%;
+		height: calc(100% - 80px);
+		margin-top: 80px;
+	}
+
+	.ls-about-me > .container-fluid, .ls-about-me > .container-fluid > .row {
+		height: 100%;
+	}
+
+	.ls-avatar-about-me {
 		position: relative;
-		left: -15px;
 	}
 
 	.ls-box-img {
 		width: 100%;
 		display: table;
+		position: absolute;
+		left: -15px;
+		bottom: 0;
 	}
 
 	.ls-page-list li::before {
@@ -1637,4 +1650,8 @@ p {
 
 .ls-slide-top-in {
 	animation: slideTopIn 0.6s forwards cubic-bezier(0.47, 1.1, 0.62, 1.13);
+}
+
+[data-aos=fade-left] {
+    transform: translate3d(0,0,0)
 }

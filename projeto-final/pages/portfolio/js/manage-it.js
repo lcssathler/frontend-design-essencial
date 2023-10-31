@@ -69,9 +69,8 @@ var closeSkeleton = (galleryImage) => {
   myImage.addEventListener("load", () => {
     skeletonLoading.classList.add("ls-fade-out");
     setTimeout(() => {
-      console.log("Loaded!");
       skeletonLoading.style.display = "none";
-    }, 2000);
+    }, 1000);
   });
 };
 
