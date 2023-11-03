@@ -1285,7 +1285,7 @@ p {
 
 	.ls-portfolio-list .ls-portfolio-item:nth-child(odd) .ls-portfolio-item-thumb button {
 		float: right;
-		margin: 15px 50px 0 0;
+		margin: 15px 60px 0 0;
 	}
 
 	.ls-portfolio-list .ls-portfolio-item:nth-child(even) .ls-portfolio-item-info {
@@ -1295,7 +1295,7 @@ p {
 
 	.ls-portfolio-list .ls-portfolio-item:nth-child(even) .ls-portfolio-item-thumb button {
 		float: left;
-		margin: 15px 0 0 50px;
+		margin: 15px 0 0 60px;
 	}
 
 	.ls-portfolio-list .ls-portfolio-item:nth-child(even)>.row {
@@ -1314,7 +1314,7 @@ p {
 	}
 
 
-	/* ------- MANAGE ------- IT */
+	/* ------- MANAGE IT ------- */
 
 	.ls-project-stats {
 		border-right: 1px solid #2ccb69;
@@ -1433,6 +1433,10 @@ p {
 	}
 
 	/* ------- ABOUT ME -------- */
+	.ls-box-img {
+		max-width: 80%;
+	}
+
 	.ls-info-about-me{
 		width: 35%;
 	}
