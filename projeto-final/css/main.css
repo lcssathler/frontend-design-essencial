@@ -340,7 +340,7 @@ p {
 	}
 
 	.ls-social-links-circle {
-		width: 70%;
+		width: 210px;
 		padding: 0;
 	}
 
@@ -722,8 +722,6 @@ p {
 	}
 
 
-
-
 	/* ABOUT ME */
 
 	.ls-about-me {
@@ -744,9 +742,10 @@ p {
 	.ls-box-img {
 		width: 100%;
 		display: table;
-		position: absolute;
+		position: relative;
 		left: -15px;
 		bottom: 0;
+		margin-top: 30px;
 	}
 
 	.ls-title-about-me, .ls-info-about-me, .ls-awards-about-me {
@@ -756,7 +755,7 @@ p {
 	}
 
 	.ls-title-about-me h1{
-		font-size: 90px;
+		font-size: 65px;
 		word-spacing: 20px;
 	}
 
@@ -995,6 +994,11 @@ p {
 	.ls-gallery-frame-container {
 		width: 38%;
 	}
+
+	/* ------ ABOUT ME ------ */
+	.ls-social-links-circle {
+		width: 310px;
+	}
 }
 
 @media screen and (min-width: 576px) {
@@ -1083,6 +1087,11 @@ p {
 
 	.ls-home-informations {
 		max-width: 310px;
+	}
+
+	/* ------ ABOUT ME ------ */
+	.ls-title-about-me h1 {
+		font-size: 90px;
 	}
 
 
@@ -1303,9 +1312,19 @@ p {
 	}
 
 	/* ------- ABOUT ME ------- */
-	
+
+	.ls-box-img {
+		position: absolute;
+		left: -15px;
+		margin-top: 0;
+	}
+
 	.ls-info-about-me{
 		width: 45%;
+	}
+
+	.ls-social-links-circle {
+		width: 70%;
 	}
 
 	.ls-awards-about-me {
