@@ -14,6 +14,8 @@
 </head>
 
 <body>
+	<div class="ls-trigger-topbar"></div>
+
 	<div class="ls-preloader-inner ls-text-light">
 		<div class="preloader-container">
 			<img src="images/lemon-loader.svg" alt="Lemon" class="ls-mar-bottom-15" />
@@ -40,28 +42,28 @@
 
 			<form class="ls-form ls-mar-top-15">
 				<div class="ls-form-row-medium">
-					<label for="Email" class="ls-text-light">Email</label>
-					<input type="email" name="Email" id="ls-email" class="ls-field ls-field-medium" />
+					<label for="email" class="ls-text-light">Email</label>
+					<input type="email" name="Email" autocomplete="email" id="email" class="ls-field ls-field-medium" />
 				</div>
 
 				<div class="ls-form-row-medium">
-					<label for="Name" class="ls-text-light">Name</label>
-					<input type="text" name="Name" id="ls-name" class="ls-field ls-field-medium" />
+					<label for="name" class="ls-text-light">Name</label>
+					<input type="text" name="Name" autocomplete="name" id="name" class="ls-field ls-field-medium" />
 				</div>
 
 				<div class="ls-form-row-medium">
-					<label for="Site" class="ls-text-light">Site</label>
-					<input type="text" name="Site" id="ls-site" class="ls-field ls-field-medium" />
+					<label for="site" class="ls-text-light">Site</label>
+					<input type="text" name="Site" id="site" class="ls-field ls-field-medium" />
 				</div>
 
 				<div class="ls-form-row-medium">
-					<label for="Phone" class="ls-text-light">Phone</label>
-					<input type="tel" name="Phone" id="ls-phone" class="ls-field ls-field-medium" />
+					<label for="phone" class="ls-text-light">Phone</label>
+					<input type="tel" name="Phone" autocomplete="phone" id="phone" class="ls-field ls-field-medium" />
 				</div>
 
 				<div class="ls-form-row-large">
-					<label for="Require" class="ls-text-light">What do you need for your project?</label>
-					<input type="text" name="Require" id="ls-require" class="ls-field ls-field-large" />
+					<label for="require" class="ls-text-light">What do you need for your project?</label>
+					<input type="text" name="Require" id="require" class="ls-field ls-field-large" />
 				</div>
 
 				<div class="ls-form-row-medium ls-require ls-mar-top-15">
@@ -329,6 +331,17 @@
 	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/inview.min.js"></script>
+	<script>
+		//Animation on scroll
+		var myScrollDown = document.querySelector(".ls-scroll-down");
+		var waypoint = new Waypoint({
+			element: myScrollDown,
+			handler: function () {
+				myScrollDown.classList.toggle("ls-fade-out");
+			},
+			offset: "80%"
+		});
+	</script>
 	<script src="js/anime.min.js"></script>
 	<script src="js/slider.js"></script>
 	<script src="js/main.js"></script>

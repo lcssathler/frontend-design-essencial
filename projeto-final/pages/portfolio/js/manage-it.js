@@ -18,7 +18,6 @@ totalCounter.innerHTML = galleryImages.length;
 
 //Parallel
 AOS.init();
-var rellax = new Rellax(".rellax");
 
 for (const element of galleryImages) {
   new Waypoint.Inview({

@@ -67,6 +67,28 @@
 	}
 }
 
+@keyframes topbarBg {
+	from {
+		background: transparent;
+	}
+
+	to {
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&1+0,0.1+100;Neutral+Density */
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+		/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	}
+}
+
+@keyframes logoShorten {
+	from {
+		top: 0;
+	}
+
+	to {
+		top: -22px;
+	}
+}
+
 p {
 	font-family: "Open Sans", sans-serif;
 }
@@ -77,16 +99,30 @@ p {
 	}
 }
 
+.ls-trigger-topbar {
+	display: block;
+	width: 1px;
+	height: 1px;
+	position: absolute;
+	top: 130px;
+	left: 0;
+	background-color: #2ccb69;
+}
+
 @media screen and (min-width: 320px) {
 	.ls-topbar {
 		width: 100%;
 		height: 110px;
 		display: block;
-		background-color: transparent;
+		background: transparent;
 		position: fixed;
 		top: 0;
 		left: 0;
 		z-index: 1000;
+	}
+
+	.ls-topbar-bg {
+		animation: topbarBg 0.2s forwards ease-out;
 	}
 
 	.ls-logo {
@@ -98,6 +134,11 @@ p {
 		float: left;
 		margin-left: 60px;
 		border-bottom-right-radius: 38px;
+		position: relative;
+	}
+
+	.ls-logo-shorten {
+		animation: logoShorten 0.2s forwards ease-out;
 	}
 
 	.ls-logo img {
@@ -448,7 +489,7 @@ p {
 		width: 15px;
 		height: 65px;
 		position: absolute;
-		bottom: 0;
+		bottom: 15px;
 		left: 0;
 		right: 0;
 		margin: 0 auto 10px auto;
@@ -731,7 +772,8 @@ p {
 		margin-top: 80px;
 	}
 
-	.ls-about-me > .container-fluid, .ls-about-me > .container-fluid > .row {
+	.ls-about-me>.container-fluid,
+	.ls-about-me>.container-fluid>.row {
 		height: 100%;
 	}
 
@@ -748,13 +790,15 @@ p {
 		margin-top: 30px;
 	}
 
-	.ls-title-about-me, .ls-info-about-me, .ls-awards-about-me {
+	.ls-title-about-me,
+	.ls-info-about-me,
+	.ls-awards-about-me {
 		width: 100%;
 		display: table;
 		float: left;
 	}
 
-	.ls-title-about-me h1{
+	.ls-title-about-me h1 {
 		font-size: 65px;
 		word-spacing: 20px;
 	}
@@ -1003,13 +1047,13 @@ p {
 
 @media screen and (min-width: 576px) {
 	.ls-logo {
-		width: 74px;
-		height: 110px;
+		width: 64px;
+		height: 90px;
 	}
 
 	.ls-logo img {
-		width: 46px;
-		height: 31px;
+		width: 40px;
+		height: 45px;
 	}
 
 	/* ------ INDEX ------ */
@@ -1097,7 +1141,7 @@ p {
 	}
 
 
-	/* --- UTILITIES --- */ 
+	/* --- UTILITIES --- */
 
 	.ls-text-center-mobile-view {
 		text-align: left;
@@ -1113,16 +1157,6 @@ p {
 
 	.ls-gallery-frame-img {
 		top: 10px;
-	}
-
-	.ls-logo {
-		width: 64px;
-		height: 90px;
-	}
-
-	.ls-logo img {
-		width: 40px;
-		height: 45px;
 	}
 
 	.ls-menu {
@@ -1325,7 +1359,7 @@ p {
 		margin-top: 0;
 	}
 
-	.ls-info-about-me{
+	.ls-info-about-me {
 		width: 45%;
 	}
 
@@ -1462,7 +1496,7 @@ p {
 		max-width: 80%;
 	}
 
-	.ls-info-about-me{
+	.ls-info-about-me {
 		width: 35%;
 	}
 
@@ -1713,5 +1747,5 @@ p {
 }
 
 [data-aos=fade-left] {
-    transform: translate3d(0,0,0)
+	transform: translate3d(0, 0, 0)
 }

@@ -48,12 +48,15 @@ for (let i = 0; i < toggleModal.length; i++) {
 	});
 }
 
-//Animation on scroll
-var myScrollDown = document.querySelector(".ls-scroll-down");
+//Animation on trigger topbar
+var triggerTopbar = document.querySelector(".ls-trigger-topbar");
+var topbar = document.querySelector(".ls-topbar");
+var logo = document.querySelector(".ls-logo");
 var waypoint = new Waypoint({
-	element: myScrollDown,
+	element: triggerTopbar,
 	handler: function () {
-		myScrollDown.classList.toggle("ls-fade-out");
+		topbar.classList.toggle("ls-topbar-bg");
+		logo.classList.toggle("ls-logo-shorten");
 	},
-	offset: "80%"
+	offset: "70px"
 });
