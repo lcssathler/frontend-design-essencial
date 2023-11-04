@@ -1221,6 +1221,10 @@ p {
 		top: 20%;
 	}
 
+	.ls-slider-list .ls-slider-item-info {
+		margin-left: 15px;
+	}
+
 	.ls-slider-list .ls-portfolio-item-thumb {
 		right: 15px;
 	}
