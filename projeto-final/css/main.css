@@ -117,7 +117,7 @@ p {
 	}
 
 	.ls-first-section {
-		height: calc(100vh - 30px);
+		height: 100vh !important;
 	}
 
 	.ls-preloader-inner {
@@ -448,7 +448,7 @@ p {
 		width: 15px;
 		height: 65px;
 		position: absolute;
-		bottom: 15px;
+		bottom: 0;
 		left: 0;
 		right: 0;
 		margin: 0 auto 10px auto;
@@ -974,10 +974,10 @@ p {
 	}
 
 	/* UTILITIES */
-	.ls-page-wrapper>.ls-full-height:first-child {
-		height: 100vh;
+	/* .ls-page-wrapper>.ls-full-height:first-child {
+		height: calc(100vh - 30px);
 		position: relative;
-	}
+	} */
 
 	.ls-full-height {
 		height: auto;
@@ -1011,6 +1011,8 @@ p {
 		width: 46px;
 		height: 31px;
 	}
+
+	/* ------ INDEX ------ */
 
 	.ls-home-presentation {
 		background-size: 80% auto;
