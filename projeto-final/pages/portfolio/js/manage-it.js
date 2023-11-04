@@ -14,9 +14,7 @@ var skeletonLoading = document.querySelector(".ls-skeleton-loading");
 
 totalCounter.innerHTML = galleryImages.length;
 
-//Manage it - excluding blank space under gallery
-var postGalleryHeight = postGallery.clientHeight;
-postGallery.style.height = postGalleryHeight - 270 + "px";
+
 
 //Parallel
 AOS.init();
@@ -124,3 +122,7 @@ for (let item of toggleGallery) {
     closeOverlay();
   });
 }
+
+//Manage it - excluding blank space under gallery
+var postGalleryHeight = postGallery.clientHeight;
+postGallery.style.height = (postGalleryHeight - 270) + "px";
