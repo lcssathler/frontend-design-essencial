@@ -89,6 +89,16 @@
 	}
 }
 
+@keyframes logoExtended {
+	from {
+		top: -22px;
+	}
+
+	to {
+		top: 0;
+	}
+}
+
 p {
 	font-family: "Open Sans", sans-serif;
 }
@@ -139,6 +149,10 @@ p {
 
 	.ls-logo-shorten {
 		animation: logoShorten 0.2s forwards ease-out;
+	}
+
+	.ls-logo-extended {
+		animation: logoExtended 0.2s forwards ease-out;
 	}
 
 	.ls-logo img {

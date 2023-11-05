@@ -57,6 +57,7 @@ var waypoint = new Waypoint({
 	handler: function () {
 		topbar.classList.toggle("ls-topbar-bg");
 		logo.classList.toggle("ls-logo-shorten");
+		logo.classList.toggle("ls-logo-extended");
 	},
 	offset: "70px"
 });
