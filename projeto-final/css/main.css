@@ -119,6 +119,68 @@ p {
 	background-color: #2ccb69;
 }
 
+.ls-border-top-left, .ls-border-bottom-right {
+	width: 30px;
+	height: 30px;
+	display: block;
+	position: fixed;
+	z-index: 1000;
+}
+
+.ls-border-top-left {
+	top: 0;
+	left: 0;
+}
+
+.ls-border-top-left::before {
+	content: '';
+	display: block;
+	width: 30px;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #000;
+}
+
+.ls-border-top-left::after {
+	content: '';
+	display: block;
+	width: 100vw;
+	height: 30px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #000;
+}
+
+.ls-border-bottom-right {
+	bottom: 0;
+	right: 0;
+}
+
+.ls-border-bottom-right::before {
+	content: '';
+	display: block;
+	width: 100vw;
+	height: 30px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	background-color: #000;
+}
+
+.ls-border-bottom-right::after {
+	content: '';
+	display: block;
+	width: 30px;
+	height: 100vh;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	background-color: #000;
+}
+
 @media screen and (min-width: 320px) {
 	.ls-topbar {
 		width: 100%;
