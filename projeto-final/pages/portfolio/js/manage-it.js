@@ -1,4 +1,5 @@
 var postGallery = document.querySelector(".ls-post-gallery");
+var galleryImagesBox = document.querySelectorAll(".ls-thumb-box");
 var galleryImages = document.querySelectorAll(".ls-thumb-img");
 var overlay = document.querySelector(".ls-overlay");
 var galleryFrameContainer;
@@ -71,12 +72,13 @@ var closeSkeleton = (galleryImage) => {
   });
 };
 
-for (let i = 0; i < galleryImages.length; i++) {
-  let item = galleryImages[i];
-  item.addEventListener("click", () => {
+for (let i = 0; i < galleryImagesBox.length; i++) {
+  let itemBox = galleryImagesBox[i];
+  itemBox.addEventListener("click", () => {
     openOverlay();
     skeletonLoading.style.display = "flex";
 
+    let item = itemBox.querySelector(".ls-thumb-img")
     currentGalleryImage = item;
     setImage(currentGalleryImage);
     currentCounter.innerHTML = counterFormatter(i);

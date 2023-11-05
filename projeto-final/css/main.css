@@ -605,6 +605,7 @@ p {
 		position: absolute;
 		left: 0;
 		bottom: 30px;
+		z-index: 900;
 	}
 
 	.ls-navigator-counter {
@@ -725,9 +726,6 @@ p {
 		margin-bottom: 100px;
 	}
 
-	.ls-portfolio-list .ls-portfolio-item:nth-child(5) {
-		height: calc(100vh - 100px);
-	}
 
 	.ls-slider-list .ls-portfolio-item-info {
 		width: calc(100% - 40px);
@@ -1399,6 +1397,10 @@ p {
 	.ls-portfolio-list .ls-portfolio-item {
 		height: 100vh;
 		margin: 0;
+	}
+
+	.ls-portfolio-list .ls-portfolio-item:nth-child(5) {
+		height: 85vh;
 	}
 
 	.ls-portfolio-list .ls-portfolio-item-info {
