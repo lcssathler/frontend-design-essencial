@@ -119,7 +119,8 @@ p {
 	background-color: #2ccb69;
 }
 
-.ls-border-top-left, .ls-border-bottom-right {
+.ls-border-top-left,
+.ls-border-bottom-right {
 	width: 30px;
 	height: 30px;
 	display: block;
@@ -1115,12 +1116,29 @@ p {
 		margin: 3px 0;
 	}
 
-	/* UTILITIES */
-	/* .ls-page-wrapper>.ls-full-height:first-child {
-		height: calc(100vh - 30px);
-		position: relative;
-	} */
+	/* ------ PAGE 404  NOT FOUND ------ */
+	.ls-404 {
+		text-align: center;
+		margin-top: 50px;
+	}
 
+	.ls-404 h1 {
+		font-size: 55px;
+	}
+
+	.ls-404 .ls-btn {
+		text-decoration: none;
+		float: none;
+		margin: 15px auto 0 auto;
+	}
+
+	.ls-404 img {
+		margin: 30px auto 0 auto;
+	}
+
+
+
+	/* UTILITIES */
 	.ls-full-height {
 		height: auto;
 		position: relative;
@@ -1130,6 +1148,15 @@ p {
 		text-align: center;
 	}
 
+}
+
+@media screen and (min-width: 512px) {
+	/* ------ PAGE 404  NOT FOUND ------ */
+
+	.ls-404 img {
+		width: 63%;
+		max-width: 63%;
+	}
 }
 
 @media screen and (min-width: 540px) {
@@ -1236,6 +1263,13 @@ p {
 	/* ------ ABOUT ME ------ */
 	.ls-title-about-me h1 {
 		font-size: 90px;
+	}
+
+	/* ------ PAGE 404  NOT FOUND ------ */
+	.ls-404 img {
+		width: 45%;
+		max-width: 45%;
+		margin: 15px auto 0 auto;
 	}
 
 
@@ -1485,6 +1519,29 @@ p {
 		margin-top: 0;
 	}
 
+	/* ------ PAGE 404 NOT FOUND ------ */
+	.ls-404 {
+		text-align: left;
+	}
+
+	.ls-404 h1 {
+		font-size: 90px;
+	}
+
+	.ls-404 p {
+		font-size: 22px;
+	}
+
+	.ls-404 .ls-btn {
+		float: left;
+		margin: 15px 0 0 0;
+	}
+
+	.ls-404 img {
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
+	}
 
 	/* UTILITIES */
 
