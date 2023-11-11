@@ -528,7 +528,7 @@ p {
 	.ls-home-presentation {
 		position: relative;
 		background-image: url("../images/joao-lemon-designer-home.png");
-		background-size: 63vh auto;
+		background-size: 64vh auto;
 		background-repeat: no-repeat;
 		background-position: 50% bottom;
 	}
@@ -551,7 +551,7 @@ p {
 
 	.ls-scroll-down {
 		width: 50px;
-		height: 90px;
+		height: 130px;
 		display: block;
 		background-color: #2ccb69;
 		border-radius: 35px 35px 0 0;
@@ -564,9 +564,9 @@ p {
 
 	.ls-scroll-arrow {
 		width: 15px;
-		height: 65px;
+		height: 55px;
 		position: absolute;
-		bottom: 15px;
+		bottom: 60px;
 		left: 0;
 		right: 0;
 		margin: 0 auto 10px auto;
@@ -747,7 +747,7 @@ p {
 		text-align: center;
 	}
 
-	.ls-slider-list .ls-portfolio-item-info button {
+	.ls-slider-list .ls-portfolio-item-info a {
 		margin: 0 auto;
 	}
 
@@ -825,7 +825,7 @@ p {
 
 	}
 
-	.ls-portfolio-list .ls-portfolio-item:nth-child(odd) .ls-portfolio-item-info button {
+	.ls-portfolio-list .ls-portfolio-item:nth-child(odd) .ls-portfolio-item-info a {
 		float: right;
 	}
 
@@ -1408,7 +1408,7 @@ p {
 		font-size: 38px;
 	}
 
-	.ls-slider-list .ls-portfolio-item-info button {
+	.ls-slider-list .ls-portfolio-item-info a {
 		margin: 0;
 	}
 
@@ -1451,7 +1451,7 @@ p {
 		text-align: right;
 	}
 
-	.ls-portfolio-list .ls-portfolio-item:nth-child(odd) .ls-portfolio-item-info button {
+	.ls-portfolio-list .ls-portfolio-item:nth-child(odd) .ls-portfolio-item-info a {
 		float: right;
 	}
 
@@ -1468,7 +1468,7 @@ p {
 		left: -60px;
 	}
 
-	.ls-portfolio-list .ls-portfolio-item:nth-child(odd) .ls-portfolio-item-thumb button {
+	.ls-portfolio-list .ls-portfolio-item:nth-child(odd) .ls-portfolio-item-thumb a {
 		float: right;
 		margin: 15px 60px 0 0;
 	}
@@ -1478,7 +1478,7 @@ p {
 		text-align: left;
 	}
 
-	.ls-portfolio-list .ls-portfolio-item:nth-child(even) .ls-portfolio-item-thumb button {
+	.ls-portfolio-list .ls-portfolio-item:nth-child(even) .ls-portfolio-item-thumb a {
 		float: left;
 		margin: 15px 0 0 60px;
 	}
@@ -1629,7 +1629,7 @@ p {
 		left: -75px;
 	}
 
-	.ls-slider-list .ls-portfolio-item-thumb>button {
+	.ls-slider-list .ls-portfolio-item-thumb>a {
 		margin-right: 70px;
 	}
 
@@ -1669,6 +1669,7 @@ p {
 /* Buttons */
 .ls-btn {
 	display: table;
+	width: fit-content;
 	font-family: "Open Sans", sans-serif;
 	font-weight: 600;
 	text-align: center;
@@ -1676,6 +1677,7 @@ p {
 	transition: all 0.15s ease-out;
 	cursor: pointer;
 	position: relative;
+	text-decoration: none;
 }
 
 .ls-btn ion-icon {
