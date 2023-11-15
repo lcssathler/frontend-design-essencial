@@ -73,7 +73,7 @@
 
 @keyframes slideTopIn {
 	to {
-		top: 15%;
+		top: 10%;
 	}
 }
 
@@ -309,7 +309,7 @@ p {
 		left: 0;
 		margin: 0 auto;
 		padding: 30px;
-		z-index: 3000;
+		z-index: 5000;
 		border-radius: 34px 0px 33px 33px
 	}
 
@@ -321,6 +321,7 @@ p {
 
 	.ls-modal-header h1 {
 		line-height: 30px;
+		width: 95%;
 	}
 
 	.ls-modal-header .ls-modal-close {
@@ -377,11 +378,11 @@ p {
 	}
 
 	.ls-field-medium {
-		height: 45px;
+		height: 35px;
 	}
 
 	.ls-field-large {
-		height: 90px;
+		height: 75px;
 	}
 
 	.ls-require {
@@ -1597,7 +1598,6 @@ p {
 		left: 0;
 		margin: 0 auto;
 		padding: 30px;
-		z-index: 3000;
 	}
 
 	.ls-form {
