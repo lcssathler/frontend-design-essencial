@@ -23,6 +23,7 @@
 		</div>
 	</div>
 
+	<div class="ls-transparent-overlay ls-contact-toggle"></div>
 	<div class="ls-overlay ls-toggle-modal ls-fade-in"></div>
 	<div class="ls-menu-mobile-overlay ls-toggle-menu-mobile ls-fade-in"></div>
 
@@ -120,7 +121,7 @@
 		</div>
 	</div>
 
-	<button class="ls-btn-contact"></button>
+	<button class="ls-btn-contact ls-contact-toggle"></button>
 
 	<div class="ls-page-wrapper">
 		<section class="ls-full-height ls-first-section ls-home-presentation">
@@ -305,12 +306,20 @@
 	<script>
 		//Animation on scroll
 		var myScrollDown = document.querySelector(".ls-scroll-down");
+		var homePresentation = document.querySelector(".ls-home-presentation");
 		var waypoint = new Waypoint({
 			element: myScrollDown,
 			handler: function () {
 				myScrollDown.classList.toggle("ls-fade-out");
 			},
 			offset: "80%"
+		});
+		var waypointHome = new Waypoint({
+			element: myScrollDown,
+			handler: function () {
+				homePresentation.classList.toggle("ls-fade-home");
+			},
+			offset: "50%"
 		});
 	</script>
 	<script src="js/anime.min.js"></script>
