@@ -1452,7 +1452,7 @@ p {
 
 	.ls-slider-list .ls-portfolio-item .ls-portfolio-item-thumb a {
 		float: right;
-		margin: 15px 45px 0 0;
+		margin: 15px 70px 0 0;
 	}
 
 	.ls-portfolio-section {
@@ -1511,7 +1511,7 @@ p {
 
 	.ls-portfolio-list .ls-portfolio-item:nth-child(even) .ls-portfolio-item-thumb a {
 		float: left;
-		margin: 15px 0 0 30px;
+		margin: 15px 0 0 55px;
 	}
 
 	.ls-portfolio-list .ls-portfolio-item:nth-child(even)>.row {
@@ -1680,6 +1680,12 @@ p {
 	.ls-portfolio-list .ls-portfolio-item:nth-child(odd) .ls-portfolio-item-thumb img {
 		left: -60px;
 	}
+
+	.ls-portfolio-list .ls-portfolio-item:nth-child(odd) .ls-portfolio-item-thumb a {
+		float: right;
+		margin: 15px 60px 0 0;
+	}
+
 
 	/* ------- ABOUT ME -------- */
 	.ls-box-img {
