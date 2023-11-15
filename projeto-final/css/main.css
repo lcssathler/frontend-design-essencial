@@ -1701,8 +1701,6 @@ p {
 	}
 }
 
-@media screen and (min-width: 1364px) {}
-
 /* Buttons */
 .ls-btn {
 	display: table;
